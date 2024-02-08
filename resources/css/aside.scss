@@ -1,0 +1,132 @@
+aside{
+    height: auto;
+}
+
+aside .toggle{
+    display: flex;
+    align-items: center;
+   justify-content: space-between; 
+    margin-top: 1.4rem;
+}
+
+aside .toggle .logo{
+    display: flex;
+    gap: 0.5rem;
+}
+
+aside .toggle .logo img{
+    width: 2rem;
+    height: 2rem;
+}
+
+aside .toggle .close{
+    padding-right: 1rem;
+    display: none;
+}
+
+aside .toggle button{
+    display: none;
+}
+
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    height: 94vh;
+    position: relative;
+    top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar:focus{
+    display: none;
+}
+
+aside .sidebar a{
+    display: flex;
+    align-items: center;
+    color: var(--color-info-dark);
+    height: 3.4rem;
+    gap: 1rem;
+    position: relative;
+    margin-left: 2rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+aside .sidebar a.active{
+    width: 100%;
+    color: var(--color-primary);
+    background-color: var(--color-light);
+    margin-left: 0;
+}
+
+aside .sidebar a.active::before{
+    content: '';
+    width: 0.7rem;
+    height: 100%;
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius-2);
+    margin-left: 0.5rem;
+}
+
+aside .sidebar a.active span{
+    color: var(--color-primary);
+    margin-left: calc(1rem - 4px);
+}
+
+aside .sidebar a:hover{
+    color: var(--color-primary);
+    margin-top: 0.3rem;
+}
+
+aside .sidebar a:hover span{
+    margin-left: 0.1rem;
+}
+
+aside .sidebar .message-count{
+    background-color: var(--color-danger);
+    padding: 2px 6px;
+    color: var(--color-white);
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+// /*submenu*/
+.lista:hover #menu {
+    display: flex;
+    position: absolute;
+}
+
+#menu {
+    display: none;
+    position: absolute;
+    transition: all 0.3s ease;
+    margin-top: -38px;
+    margin-left: 12.1rem;
+    background: var(--color-white);
+    border-radius: var(--border-radius-2);
+    flex-direction:column-reverse;
+    width:100%; 
+    height: fit-content;
+   
+}
+
+#menu a {
+   display: flex;
+    position:static;
+    margin-top: -0%;
+}
+
