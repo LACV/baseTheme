@@ -1,37 +1,42 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+
+
+module.exports = {
   content: [
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
-
   ],
   darkMode: 'class',
-  theme: { 
+  theme: {
     extend: {
       colors: {
         primary: 'var(--color-primary)',
-        secondary : 'var(--color-secondary)',
-        accent :'var(--color-secondary)',
-        neutral: '#030707',         
+        secondary: 'var(--color-secondary)',
+        accent: 'var(--color-secondary)',
+        neutral: '#030707',
         info: '#009aff',
-        success: '#00d492',       
-        warning: '#cf9900',        
+        success: '#00d492',
+        warning: '#cf9900',
         error: '#ff6771',
-        coolGray:{
-            dark: {
-              50:'#111827',
-              100:'#1F2937',
-              200:'#374151',
-              300:'#4B5563',
-              400:'#6B7280',
-              500:'#9CA3AF',
-              600:'#D1D5DB',
-              700:'#E5E7EB',
-              800:'#F3F4F6',
-              900:'#F9FAFB',
-            },
-        }
+
+        white:{
+          DEFAULT: '#fff',  
+          dark: '#f5f5f5',  
+        },
+
+        gray: {
+          50: 'var(--color-gray-50-dark)',
+          100: 'var(--color-gray-100-dark)',
+          200: 'var(--color-gray-200-dark)',
+          300: 'var(--color-gray-300-dark)',
+          400: 'var(--color-gray-400-dark)',
+          500: 'var(--color-gray-500-dark)',
+          600: 'var(--color-gray-600-dark)',
+          700: 'var(--color-gray-700-dark)',
+          800: 'var(--color-gray-800-dark)',
+          900: 'var(--color-gray-900-dark)',
+          },
 
       },
     },

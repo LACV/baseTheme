@@ -22,6 +22,20 @@
     --padding-1: 1.2rem;
 
     --box-shadow: 0 2rem 3rem var(--color-light);
+
+
+    //************** Colores de Tailwind ******************
+
+    --color-gray-50-dark: #F9FAFB;
+    --color-gray-100-dark: #F3F4F6;
+    --color-gray-200-dark: #E5E7EB;
+    --color-gray-300-dark: #D1D5DB;
+    --color-gray-400-dark: #9CA3AF;
+    --color-gray-500-dark: #6B7280;
+    --color-gray-600-dark: #4B5563;
+    --color-gray-700-dark: #374151;
+    --color-gray-800-dark: #1F2937;
+    --color-gray-900-dark: #111827;
 }
 
 .dark-mode-variables{
@@ -31,6 +45,19 @@
     --color-dark-variant: #a3bdcc;
     --color-light: rgba(0, 0, 0, 0.4);
     --box-shadow: 0 2rem 3rem var(--color-light);
+
+    //************** Colores de Tailwind ******************
+
+    --color-gray-50-dark: #111827;
+    --color-gray-100-dark: #202528;
+    --color-gray-200-dark: #374151;
+    --color-gray-300-dark: #4B5563;
+    --color-gray-400-dark: #6B7280;
+    --color-gray-500-dark: #9CA3AF;
+    --color-gray-600-dark: #D1D5DB;
+    --color-gray-700-dark: #E5E7EB;
+    --color-gray-800-dark: #F3F4F6;
+    --color-gray-900-dark: #F9FAFB;
 }
 
 
