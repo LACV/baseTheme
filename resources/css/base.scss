@@ -2,7 +2,9 @@
 
 
 :root{
-    --color-primary: #5e2e8b;
+    --color-primary: #FF0060;
+
+
     --color-secondary:#3f0ec4;
     --color-danger: #FF0060;
     --color-success: #1B9C85;
@@ -28,7 +30,7 @@
 
     --color-gray-50-dark: #F9FAFB;
     --color-gray-100-dark: #F3F4F6;
-    --color-gray-200-dark: #E5E7EB;
+    --color-gray-200-dark: #ebe5eb;
     --color-gray-300-dark: #D1D5DB;
     --color-gray-400-dark: #9CA3AF;
     --color-gray-500-dark: #6B7280;
@@ -50,7 +52,7 @@
 
     --color-gray-50-dark: #111827;
     --color-gray-100-dark: #202528;
-    --color-gray-200-dark: #374151;
+    --color-gray-200-dark: #293033;
     --color-gray-300-dark: #4B5563;
     --color-gray-400-dark: #6B7280;
     --color-gray-500-dark: #9CA3AF;
@@ -75,7 +77,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 
 html{

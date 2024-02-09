@@ -20,6 +20,7 @@ module.exports = {
         warning: '#cf9900',
         error: '#ff6771',
 
+
         white:{
           DEFAULT: '#fff',  
           dark: '#f5f5f5',  
