@@ -22,7 +22,7 @@
                     
                         <div @click="asideMenu.toggleOpenCloseMenu" class="close" id="close-btn">
                             <span class="material-icons-sharp">close</span>
-                        </div>
+                        </div> 
                         
                     </div>
 
