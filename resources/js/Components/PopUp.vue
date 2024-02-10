@@ -1,7 +1,7 @@
 <script setup>
 import * as usePopUp from '@/usePopUp.js';
-
-import PrimaryButton from '@/Components/PrimaryButton.vue';
+import Button3 from '@/Components/Button3.vue';
+import Button4 from '@/Components/Button4.vue';
 
 </script>
 
@@ -23,12 +23,13 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
         
         <div class="mt-4 flex justify-end">
             <slot/>
-            <PrimaryButton class="ms-4" >
-                    Guardar
-            </PrimaryButton>
-            <PrimaryButton  @click="usePopUp.toggleShowClose"  class="ms-4" >
+            <Button4  @click="usePopUp.toggleShowClose"  >
                     Cancelar
-            </PrimaryButton>
+            </Button4>
+            <Button3 >
+                    Guardar
+            </Button3>
+           
 
 
         </div>
