@@ -11,26 +11,27 @@ defineProps({
     <button 
         :type="type" 
         class="
-        text-button5 
+        text-error
         hover:text-white 
         border 
-        border-button5 
-        hover:bg-button5
+        border-error
+        hover:bg-error
         focus:ring-4 
         focus:outline-none 
-        focus:ring-button5
-        font-medium rounded-lg 
+        focus:ring-error
+        font-medium 
+        rounded-lg 
         text-sm 
         px-5 
         py-2.5 
         text-center 
         me-2 
         mb-2 
-        dark:border-button5 
-        dark:text-button5 
+        dark:border-error 
+        dark:text-error
         dark:hover:text-white 
-        dark:hover:bg-button5 
-        dark:focus:ring-button5
+        dark:hover:bg-error
+        dark:focus:ring-error
         ">
         <slot />
     </button>

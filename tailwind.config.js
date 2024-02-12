@@ -19,11 +19,7 @@ module.exports = {
         success: '#00d492',
         warning: '#cf9900',
         error: '#ff6771',
-        button1: '#1818e2',
-        button3: '#0a6b0a',
-        button4: '#ce0808',
-        button5: '#c5c515',
-        button6: '#800080',
+        purple: '#800080',
 
 
 

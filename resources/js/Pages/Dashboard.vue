@@ -3,12 +3,12 @@
 import AppLayout from '@/Layouts/AppLayout.vue';
 import Welcome from '@/Components/Welcome.vue';
 import PopUp from '@/Components/PopUp.vue'
-import Button1 from '@/Components/Button1.vue'
-import Button2 from '@/Components/Button2.vue'
-import Button3 from '@/Components/Button3.vue'
-import Button4 from '@/Components/Button4.vue'
-import Button5 from '@/Components/Button5.vue'
-import Button6 from '@/Components/Button6.vue'
+import ButtonInfo from '@/Components/ButtonInfo.vue'
+import ButtonGray from '@/Components/ButtonGray.vue'
+import ButtonSuccess from '@/Components/ButtonSuccess.vue'
+import ButtonError from '@/Components/ButtonError.vue'
+import ButtonWarning from '@/Components/ButtonWarning.vue'
+import ButtonPurple from '@/Components/ButtonPurple.vue'
 
 import * as usePopUp from '@/usePopUp.js';
 
@@ -16,24 +16,24 @@ import * as usePopUp from '@/usePopUp.js';
 
 <template>
     <AppLayout title="Dashboard">
-  <Button1>
-    Boton 1
-  </Button1>  
-  <Button2 @click="usePopUp.toggleShowClose">
-    Boton 2
-  </Button2> 
-  <Button3>
-    Boton 3
-  </Button3>
-  <Button4>
-    Boton 4
-  </Button4>
-  <Button5>
-    Boton 5
-  </Button5>
-  <Button6>
-    Boton 6
-  </Button6>
+  <ButtonInfo>
+    Button Info
+  </ButtonInfo>  
+  <ButtonGray @click="usePopUp.toggleShowClose">
+    Button Gray
+  </ButtonGray> 
+  <ButtonSuccess>
+    Button Success 
+  </ButtonSuccess>
+  <ButtonError>
+    Button Error 
+  </ButtonError>
+  <ButtonWarning>
+    Button Warning 
+  </ButtonWarning>
+  <ButtonPurple>
+    Button Purple 
+  </ButtonPurple>
   
 
   <PopUp>
