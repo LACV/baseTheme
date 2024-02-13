@@ -9,12 +9,13 @@ import ButtonSuccess from '@/Components/ButtonSuccess.vue'
 import ButtonError from '@/Components/ButtonError.vue'
 import ButtonWarning from '@/Components/ButtonWarning.vue'
 import ButtonPurple from '@/Components/ButtonPurple.vue'
-
+import EjampleVue from '@/Components/Ejample.vue';
 import * as usePopUp from '@/usePopUp.js';
 
 </script>
 
 <template>
+
     <AppLayout title="Dashboard">
   <ButtonInfo>
     Button Info
@@ -34,10 +35,17 @@ import * as usePopUp from '@/usePopUp.js';
   <ButtonPurple>
     Button Purple 
   </ButtonPurple>
+  <EjampleVue/>
   
 
   <PopUp>
   </PopUp>   
+
+  
+
+ 
+ 
+
 
 <!--
 <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-100 dark:border-secundary">

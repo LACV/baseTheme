@@ -29,9 +29,6 @@ import ButtonError from '@/Components/ButtonError.vue';
             <ButtonSuccess>
                     Guardar
             </ButtonSuccess>
-           
-
-
         </div>
       </div>
     </div>
