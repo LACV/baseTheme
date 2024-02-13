@@ -1,22 +1,21 @@
 .footer {
+    position: fixed;
     background-color: var(--color-white);
     color: var(--color-info-dark);
-    padding: 1rem;
-    // border-top-left-radius: var(--card-border-radius);
+    padding:1.2rem;
+    border-top-left-radius: var(--card-border-radius);
     border-top-right-radius: var(--card-border-radius);
     box-shadow: var(--box-shadow);
-    position: fixed;
     bottom: 0; 
-    width: 98%;
-    align-items: center;
-    justify-content: space-between; 
+    width: calc(60vw);
     transition: all 0.3s ease;
     gap: 1rem;
-    z-index: 0; 
+    z-index: 1; 
   }
   
   .footer p {
     margin: 0;
+    text-align: center;
   }
   
   .footer a {

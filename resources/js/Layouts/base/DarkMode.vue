@@ -1,6 +1,7 @@
 <script setup>
 
     import { ref, onMounted } from 'vue';
+    import Notification from '@/Layouts/base/Notification.vue';
     
     //****** Dark Mode ******//
     const isDarkMode = ref(localStorage.getItem('darkMode') === 'true');
@@ -23,6 +24,7 @@
 </script>
 
 <template>
+    <Notification/>
     <div class="dark-mode" @click="toggleDarkMode" :class="{ 'dark-mode-variables': isDarkMode }">
 		<span class="material-icons-sharp" :class="{ active: !isDarkMode }">
 			light_mode

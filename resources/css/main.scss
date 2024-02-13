@@ -1,6 +1,14 @@
+.container{
+    grid-template-columns: calc(14vw) calc(58vw) calc(20vw);
+    justify-items: center;
+    margin-left: calc(1vw);
+    margin-right: calc(1vw);
+}
+
 main{
+    width: auto;
     margin-top: 5rem;
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
 }
 
 main .containerMain{

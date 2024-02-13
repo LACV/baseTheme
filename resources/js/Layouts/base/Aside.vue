@@ -1,5 +1,5 @@
 <script setup>
-    import { ref} from 'vue';
+    import { ref, onMounted, onBeforeUnmount} from 'vue';
     import * as asideMenu from '@/useAsideSetup.js';
     import { Head, Link, router } from '@inertiajs/vue3';
     
@@ -7,6 +7,30 @@
     const logout = () => {
         router.post(route('logout'));
     };
+/*
+    const elemento = ref(null);
+    const submenu = ref(null);
+
+    const calcularAltura = () => {
+    if (elemento.value) {
+        elemento.value.style.height = `calc(${elemento.value.offsetHeight}px + 5rem)`;
+    }
+    }
+
+    onMounted(() => {
+        calcularAltura();
+        window.addEventListener('resize', calcularAltura);
+        if (submenu.value) {
+            submenu.value.addEventListener('transitionend', calcularAltura);
+        }
+    });
+
+    onBeforeUnmount(() => {
+        window.removeEventListener('resize', calcularAltura);
+        if (submenu.value) {
+            submenu.value.removeEventListener('transitionend', calcularAltura);
+        }
+    });*/
     
 </script>
 
@@ -26,7 +50,7 @@
                         
                     </div>
 
-                    <div class="sidebar" v-if="$page.props.auth.user">
+                    <div class="sidebar" ref="elemento" v-if="$page.props.auth.user">
                         <a href="#">
                             <span class="material-icons-sharp">
                                 dashboard
@@ -46,41 +70,42 @@
                             </span>
                             <h3>History</h3>
                         </a>
-                            <div class="lista">
-                                <a class="active">
+                        
+                    <div class="submenu" ref="submenu">
+                        <a class="active">
                                     <span class="material-icons-sharp">
                                         insights
-                                    </span> <h3>Analytics</h3>
-                                    
-                                </a>
-                                    <div class="menu" id="menu">
-                                    <a><span class="material-icons-sharp">
-                                    featured_play_list
                                     </span>
-                                    <h3>Category</h3> </a>
-
-                                    <a><span class="material-icons-sharp">
-                                    featured_play_list
-                                    </span>
-                                    <h3>Category</h3> </a>
-
-                                    <a><span class="material-icons-sharp">
-                                    featured_play_list
-                                    </span>
-                                    <h3>Category</h3> </a>
-
-                                    <a><span class="material-icons-sharp">
-                                    featured_play_list
-                                    </span>
-                                    <h3>Category</h3> </a>
-
-                                    <a><span class="material-icons-sharp">
-                                    featured_play_list
-                                    </span>
-                                    <h3>Category</h3> </a>
-
-                                    </div> 
-                        </div> 
+                                    <h3>Menu</h3> 
+                            <div class="submenu-items">   
+                                    <a class="item">
+                                        <span class="material-icons-sharp">
+                                                   featured_play_list
+                                        </span>
+                                        <h3>Category 1</h3> 
+                                    </a>
+                                    <a class="item">
+                                        <span class="material-icons-sharp">
+                                                   featured_play_list
+                                        </span>
+                                        <h3>Category 2</h3> 
+                                    </a>
+                                    <a class="item">
+                                        <span class="material-icons-sharp">
+                                                   featured_play_list
+                                        </span>
+                                        <h3>Category 3</h3> 
+                                    </a>
+                                    <a class="item">
+                                        <span class="material-icons-sharp">
+                                            featured_play_list
+                                        </span>
+                                        <h3>Category 4</h3> 
+                                    </a>   
+                            </div>
+                        </a>
+                    </div>
+                    
                         <a href="#">
                             <span class="material-icons-sharp">
                                 mail_outline
@@ -101,30 +126,7 @@
                             </span>
                             <h3>Reports</h3>
                         </a>
-                        <div class="lista">
-                                <a>
-                                    <span class="material-icons-sharp">
-                                        insights
-                                    </span> <h3>Analytics</h3>
-                                    
-                                </a>
-                                    <div class="menu" id="menu">
-                                    <a><span class="material-icons-sharp">
-                                    featured_play_list
-                                    </span>
-                                    <h3>Category</h3> </a>
-
-                                    <a><span class="material-icons-sharp">
-                                    featured_play_list
-                                    </span>
-                                    <h3>Category</h3> </a>
-
-                                    
-
-                                    
-
-                                    </div> 
-                        </div> 
+                
                         <a href="#">
                             <span class="material-icons-sharp">
                                 settings
@@ -137,7 +139,7 @@
                             </span>
                             <h3>New Login</h3>
                         </a>
-                        <a href="#" @click="logout">
+                        <a href="#" @click="logout" class="lastchild">
                             <span class="material-icons-sharp">
                                 logout
                             </span>
