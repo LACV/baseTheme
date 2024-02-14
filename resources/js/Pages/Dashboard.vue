@@ -4,13 +4,12 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 import Welcome from '@/Components/Welcome.vue';
 import PopUp from '@/Components/PopUp.vue'
 import Buttons from '@/Components/Buttons.vue'
-
-
 import * as usePopUp from '@/usePopUp.js';
 
 </script>
 
 <template>
+
   <AppLayout title="Dashboard">
    
     <h1 class="mt-10 mb-10">Button Width Auto</h1>
@@ -18,6 +17,7 @@ import * as usePopUp from '@/usePopUp.js';
     <Buttons @click="usePopUp.toggleShowClose">
       Button Open Modal
     </Buttons>  
+
     
     <Buttons colorButton="primary">
       Button Primary

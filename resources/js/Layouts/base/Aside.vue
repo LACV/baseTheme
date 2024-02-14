@@ -40,7 +40,7 @@
             }">
                     <div class="toggle">
                         <div class="logo">
-                            <img src="images/logo.png">
+                            <img src="assets/images/logo.png">
                             <h2>Stock<span class="primary">Voult</span></h2>
                         </div>
                     

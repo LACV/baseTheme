@@ -21,7 +21,94 @@
         position: relative;
         margin-top: 1.8rem;
     }
+
+    .dropdownAvatar{
+        margin-top: -0.5rem;
+        margin-right: 3rem;
+    }
 }
+
+@media screen and (max-width: 1163px) {
+    .dropdownAvatar{
+        margin-top: -0.5rem;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .dropdownAvatar{
+        margin-top: -0.5rem;
+        margin-right: -0.5rem;
+    }
+
+}
+
+
+@media screen and (max-width: 1023px) {
+    .dropdownAvatar{
+        margin-top: -0.5rem;
+        margin-right: 3.5rem;
+    }
+
+}
+
+@media screen  and (max-width:1000px){
+    .right-section{
+        margin-top: 1.4rem;
+        margin-bottom:30rem;
+        z-index: 0;
+    } 
+
+    .dropdownAvatar{
+        margin-top: -0.5rem;
+        margin-right: 3rem;
+    }
+}
+@media screen and (max-width: 989px) {
+    .dropdownAvatar{
+        margin-top: -0.5rem;
+        margin-right: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 930px) {
+    .dropdownAvatar{
+        margin-top: -0.5rem;
+        margin-right: 2rem;
+    }
+
+}
+@media screen and (max-width: 913px) {
+    .dropdownAvatar{
+        margin-top: -0.5rem;
+        margin-right: 1.5rem;
+    }
+
+}
+@media screen and (max-width: 905px) {
+    .dropdownAvatar{
+        margin-top: -0.5rem;
+        margin-right: 0.8rem;
+    }
+
+}
+
+@media screen and (max-width: 865px) {
+    .dropdownAvatar{
+        margin-top: -0.5rem;
+        margin-right: 0.20rem;
+    }
+
+}
+@media screen and (max-width: 839px) {
+    .dropdownAvatar{
+        margin-top: -0.5rem;
+        margin-right: -0.5rem;
+    }
+
+}
+
 
 @media screen  and (max-width:1032px){
    
@@ -33,6 +120,7 @@
 }
 
 @media screen and (max-width: 790px) {
+
     .container{
         grid-template-columns: calc(95vw);
         justify-items: none;
@@ -131,6 +219,8 @@
         display: none;
     }
 
+
+
     .right-section .nav button{
         display: inline-block;
         background-color: transparent;
@@ -139,12 +229,27 @@
         position: absolute;
         left: 1rem;
         
+        
     }
     .right-section .nav button span{
         font-size: 2rem;
     }
+
     .submenu-items{
         margin-top: calc(-25% + 0.1rem);
     }
 
+    .dropdownAvatar{
+        margin-top: -0.8rem;
+        margin-right: -0.8rem;
+    }
+
+}
+  
+@media screen  and (max-width:767px){
+    .dropdownAvatar{
+        margin-top: -0.5rem;
+        margin-right: -0.3rem;
+        position:absolute;
+    }
 }

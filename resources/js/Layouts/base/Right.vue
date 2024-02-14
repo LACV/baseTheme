@@ -2,6 +2,7 @@
     import { ref, onMounted } from 'vue';
     import DarkMode from '@/Layouts/base/DarkMode.vue';
     import * as asideMenu from '@/useAsideSetup.js';
+    import UserDropdown from '@/Layouts/base/UserDropdown.vue';   
     import Buttons from '@/Components/Buttons.vue'
 </script>
 
@@ -13,16 +14,8 @@
 				</button>
 
                 <DarkMode/>
-                    
-                <div class="profile" v-if="$page.props.auth.user">
-                    <div class="info">
-                        <p>Hola, <b>Luis Cruz</b></p>
-                        <small class="text-muted">Admin</small>
-                    </div>
-                    <div class="profile-photo">
-                        <img src="images/profile-1.jpg">
-                    </div>
-                </div>
+                <UserDropdown/>
+                
 
             </div>
             <!-- End of Nav -->
