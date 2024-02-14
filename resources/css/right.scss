@@ -4,7 +4,6 @@
     z-index: 0;
 }
 
-
 .right-section .nav{
     display: flex;
     justify-content: end;
@@ -52,20 +51,22 @@
     height: 2.8rem;
     border-radius: 50%;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .right-section .reminders{
     margin-top: 2rem;
 }
 
-.right-section .reminders .header{
+
+.icoNoti{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 0.8rem;
 }
 
-.right-section .reminders .header span{
+.icoNoti span{
     padding: 10px;
     box-shadow: var(--box-shadow);
     background-color: var(--color-white);
@@ -74,7 +75,12 @@
     cursor: pointer;
 }
 
-.right-section .reminders  .notification{
+.containerNoti{
+    margin-top: 2rem;
+}
+
+
+.containerNoti .notification{
     background-color: var(--color-white);
     display: flex;
     align-items: center;
@@ -87,11 +93,11 @@
     transition: all 0.3s ease;
 }
 
-.right-section .reminders .notification:hover{
+.containerNoti .notification:hover{
     box-shadow: none;
 }
 
-.right-section .reminders .notification .content{
+.containerNoti .notification .content{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,7 +106,7 @@
 }   
 
 
-.right-section .reminders .notification .icon{
+.containerNoti .notification .icon{
     padding: 0.6rem;
     color: var(--color-white);
     background-color: var(--color-success);
@@ -108,11 +114,11 @@
     display: flex;
 }
 
-.right-section .reminders .notification.deactive .icon{
+.containerNoti .notification.deactive .icon{
     background-color: var(--color-danger);
 }
 
-.right-section .reminders .add-reminder{
+.containerNoti .add-reminder{
     background-color: var(--color-white);
     border: 2px dashed var(--color-primary);
     color: var(--color-primary);
@@ -122,12 +128,12 @@
     cursor: pointer;
 }
 
-.right-section .reminders .add-reminder:hover{
+.containerNoti .add-reminder:hover{
     background-color: var(--color-primary);
     color: white;
 }
 
-.right-section .reminders .add-reminder div{
+.containerNoti .add-reminder div{
     display: flex;
     align-items: center;
     gap: 0.6rem;

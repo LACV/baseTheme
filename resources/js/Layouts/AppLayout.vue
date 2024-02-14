@@ -49,12 +49,8 @@ const logout = () => {
         <Right/>
 
         <div class="footer">
-            <div class="copyright">
-                        <p>Copyright © LACV <a href="#" target="_blank">LACVCruz</a> 2024</p>
-            </div>
+            <p>Copyright © LACV <a href="#" target="_blank">LACVCruz</a> 2024</p>
         </div>
-
-
 
     </div>
 

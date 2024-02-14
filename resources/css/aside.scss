@@ -5,7 +5,7 @@ aside{
 aside .toggle{
     display: flex;
     align-items: center;
-   justify-content: space-between; 
+    justify-content: space-between; 
     margin-top: 1.4rem;
 }
 
@@ -60,11 +60,12 @@ aside .sidebar a span{
     transition: all 0.3s ease;
 }
 
-aside .sidebar a:last-child{
+.lastchild:last-child{
     position: absolute;
     bottom: 2rem;
     width: 100%;
 }
+
 
 aside .sidebar a.active{
     width: 100%;
@@ -75,11 +76,11 @@ aside .sidebar a.active{
 
 aside .sidebar a.active::before{
     content: '';
-    width: 0.7rem;
+    width: 0.6rem;
     height: 100%;
     background-color: var(--color-primary);
     border-radius: var(--border-radius-2);
-    margin-left: 0.5rem;
+    margin-left: 0.3rem;
 }
 
 aside .sidebar a.active span{
@@ -87,46 +88,57 @@ aside .sidebar a.active span{
     margin-left: calc(1rem - 4px);
 }
 
-aside .sidebar a:hover{
-    color: var(--color-primary);
-    margin-top: 0.3rem;
+aside .sidebar a:hover:not(.active):before {
+    content: '';
+    width: 0.5rem;
+    height: 40%;
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius-2);
 }
 
-aside .sidebar a:hover span{
-    margin-left: 0.1rem;
+aside .sidebar a:not(.active):hover{
+    color: var(--color-primary);
+    margin-top: 0.2rem;
 }
 
 aside .sidebar .message-count{
     background-color: var(--color-danger);
-    padding: 2px 6px;
+    padding: 0.12rem 0.37rem;
     color: var(--color-white);
-    font-size: 11px;
+    font-size: 0.7rem;
     border-radius: var(--border-radius-1);
 }
 
 // /*submenu*/
-.lista:hover #menu {
-    display: flex;
-    position: absolute;
+
+.submenu:hover{
+    cursor: pointer;
 }
 
-#menu {
+.item:not(.active):hover { 
+    cursor: pointer;
+}
+
+.submenu-items{
     display: none;
-    position: absolute;
-    transition: all 0.3s ease;
-    margin-top: -38px;
-    margin-left: 12.1rem;
+    //position: relative!important;
+
+    left: calc(30% + 0.1rem);
+    margin-top: calc(-35% + 0.1rem);
     background: var(--color-white);
     border-radius: var(--border-radius-2);
-    flex-direction:column-reverse;
-    width:100%; 
-    height: fit-content;
-   
+    transition: all 0.5s ease;
 }
 
-#menu a {
-   display: flex;
-    position:static;
-    margin-top: -0%;
+.submenu:hover .submenu-items{
+    display: block;
+}
+
+.item{   
+    width: 100%;
+    height: max-content;
+    padding: 1rem;
+
+
 }
 

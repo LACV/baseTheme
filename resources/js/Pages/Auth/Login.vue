@@ -1,12 +1,12 @@
 <script setup>
 import { Head, Link, useForm } from '@inertiajs/vue3';
-import AuthenticationCard from '@/Components/AuthenticationCard.vue';
+import Card from '@/Components/Card.vue';
 import appLayout from '@/Layouts/AppLayout.vue';
-import AuthenticationCardLogo from '@/Components/AuthenticationCardLogo.vue';
+import LogoApp from '@/Components/LogoApp.vue';
 import Checkbox from '@/Components/Checkbox.vue';
-import InputError from '@/Components/InputError.vue';
-import InputLabel from '@/Components/InputLabel.vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
+import ErrorMsj from '@/Components/ErrorMsj.vue';
+import Label from '@/Components/Label.vue';
+import Buttons from '@/Components/Buttons.vue';
 import TextInput from '@/Components/TextInput.vue';
 
 defineProps({
@@ -31,12 +31,13 @@ const submit = () => {
 </script>
 
 <template>
-    <Head title="Log in" />
+<Head title="Log in" />
 <appLayout>
-    <AuthenticationCard>
+
+    <Card>
     
         <template #logo>
-            <AuthenticationCardLogo />
+            <LogoApp />
             <hr class="mb-10">
         </template>
 
@@ -47,7 +48,7 @@ const submit = () => {
 
         <form @submit.prevent="submit">
             <div>
-                <InputLabel for="email" value="Email" />
+                <Label for="email" value="Email" />
                 <TextInput
                     id="email"
                     v-model="form.email"
@@ -57,11 +58,11 @@ const submit = () => {
                     autofocus
                     autocomplete="username"
                 />
-                <InputError class="mt-2" :message="form.errors.email" />
+                <ErrorMsj class="mt-2" :message="form.errors.email" />
             </div>
 
             <div class="mt-4">
-                <InputLabel for="password" value="Password" />
+                <Label for="password" value="Password" />
                 <TextInput
                     id="password"
                     v-model="form.password"
@@ -70,7 +71,7 @@ const submit = () => {
                     required
                     autocomplete="current-password"
                 />
-                <InputError class="mt-2" :message="form.errors.password" />
+                <ErrorMsj class="mt-2" :message="form.errors.password" />
             </div>
 
             <div class="block mt-4">
@@ -82,12 +83,12 @@ const submit = () => {
 
             <div class="flex items-center justify-end mt-4">
 
-                <PrimaryButton class="ms-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                <Buttons class="ms-4" colorButton="primary" maxWidthButton="full" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Log in
-                </PrimaryButton>
+                </Buttons>
             </div>
         </form>
-    </AuthenticationCard>
+    </Card>
 </appLayout>
 
 </template>

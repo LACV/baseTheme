@@ -16,7 +16,6 @@
                     <div class="flex items-center justify-center" >
                         <slot name="logo" />
                     </div>
-
             <slot />
 
         </div>
