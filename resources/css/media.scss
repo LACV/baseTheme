@@ -1,3 +1,21 @@
+@media screen and (max-width: 1360px){
+  
+    .profile{
+        margin-right: calc(3rem);
+        position: absolute;
+    }
+    .info{
+        margin-right: calc(-1rem);
+    }
+    .dropdownAvatar{
+        top: calc(3rem);
+        margin-right: calc(-1rem);
+    }
+    .right-section .dark-mode{
+        margin-right: calc(18rem);
+    }  
+}
+
 @media screen and (max-width: 1200px) {
 
     .container{
@@ -22,10 +40,14 @@
         margin-top: 1.8rem;
     }
 
-    .dropdownAvatar{
-        margin-top: -0.5rem;
-        margin-right: 3rem;
+    
+    .profile{
+        margin-right: calc(7rem);
     }
+    .right-section .dark-mode{
+        margin-right:calc(22rem);
+    }
+   
 }
 
 @media screen  and (max-width:1000px){
@@ -34,23 +56,18 @@
         margin-bottom:30rem;
         z-index: 0;
     } 
-
-    .dropdownAvatar{
-        margin-top: -0.5rem;
-        margin-right: 3rem;
-    }
-}
-
-
-
-@media screen  and (max-width:1032px){
-   
     .container{
         margin-left: 1rem;
         margin-right: 1rem;
     }
   
+    .profile{
+        margin-right: calc(10rem);
+        position: absolute;
+    }
+ 
 }
+
 
 @media screen and (max-width: 790px) {
 
@@ -145,7 +162,7 @@
     .right-section .nav .dark-mode{
         width: 4.4rem;
         position: absolute;
-        left: 66%;
+        left: 70%;
     }
 
     .right-section .profile .info{
@@ -172,24 +189,22 @@
         margin-top: calc(-25% + 0.1rem);
     }
 
+    .profile{
+        margin-right: calc(1rem);
+    }
     .dropdownAvatar{
-        margin-top: -1rem;
-        margin-right: -0.8rem;
+        margin-top:calc(0.5rem);
+        margin-right: calc(-2rem);
+        position: absolute;
     }
-
-    .profile-photo{
-        margin-right: 3.5rem;
-    }
+    
 
 }
 
 @media screen  and (max-width:500px){
-    .profile-photo{
-        margin-right: 1rem;
-    }
-    .dropdownAvatar{
-        margin-top: -1rem;
-        position: absolute;
+
+    .right-section .nav .dark-mode{
+        left: 24rem;
     }
 
 }
