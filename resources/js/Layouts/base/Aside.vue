@@ -3,34 +3,9 @@
     import * as asideMenu from '@/useAsideSetup.js';
     import { Head, Link, router } from '@inertiajs/vue3';
     
-    
     const logout = () => {
         router.post(route('logout'));
     };
-/*
-    const elemento = ref(null);
-    const submenu = ref(null);
-
-    const calcularAltura = () => {
-    if (elemento.value) {
-        elemento.value.style.height = `calc(${elemento.value.offsetHeight}px + 5rem)`;
-    }
-    }
-
-    onMounted(() => {
-        calcularAltura();
-        window.addEventListener('resize', calcularAltura);
-        if (submenu.value) {
-            submenu.value.addEventListener('transitionend', calcularAltura);
-        }
-    });
-
-    onBeforeUnmount(() => {
-        window.removeEventListener('resize', calcularAltura);
-        if (submenu.value) {
-            submenu.value.removeEventListener('transitionend', calcularAltura);
-        }
-    });*/
     
 </script>
 
@@ -50,7 +25,7 @@
                         
                     </div>
 
-                    <div class="sidebar" ref="elemento" v-if="$page.props.auth.user">
+                    <div class="sidebar" v-if="$page.props.auth.user">
                         <a href="#">
                             <span class="material-icons-sharp">
                                 dashboard
@@ -71,7 +46,7 @@
                             <h3>History</h3>
                         </a>
                         
-                    <div class="submenu" ref="submenu">
+                    <div class="submenu">
                         <a class="active">
                                     <span class="material-icons-sharp">
                                         insights

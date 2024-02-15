@@ -34,7 +34,7 @@ aside .sidebar{
     background-color: var(--color-white);
     box-shadow: var(--box-shadow);
     border-radius: 15px;
-    height: 94vh;
+    height: calc(100% + 2rem);
     position: relative;
     top: 1.5rem;
     transition: all 0.3s ease;
