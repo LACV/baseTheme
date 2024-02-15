@@ -1,6 +1,7 @@
 <script setup>
     import { ref, onMounted, onBeforeUnmount} from 'vue';
     import * as asideMenu from '@/useAsideSetup.js';
+    import UserDropdown from '@/Layouts/base/UserDropdown.vue';   
     import { Head, Link, router } from '@inertiajs/vue3';
     
     const logout = () => {
@@ -114,13 +115,19 @@
                             </span>
                             <h3>New Login</h3>
                         </a>
-                        <a href="#" @click="logout" class="lastchild">
+                        <a href="#" @click="logout" >
                             <span class="material-icons-sharp">
                                 logout
                             </span>
                             <h3>Logout</h3>
                         </a>
+                        <a class="lastchild">
+                            <UserDropdown/>
+                        </a>
+                        
+
 
                     </div>
+            
         </aside>
 </template>
