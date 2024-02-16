@@ -24,7 +24,7 @@
 </script>
 
 <template>
-    <Notification/>
+  
     <div class="dark-mode" @click="toggleDarkMode" :class="{ 'dark-mode-variables': isDarkMode }">
 		<span class="material-icons-sharp" :class="{ active: !isDarkMode }">
 			light_mode

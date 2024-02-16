@@ -23,6 +23,7 @@
     width: 4.2rem;
     cursor: pointer;
     border-radius: var(--border-radius-1);
+    margin-left: -8rem;
 }
 
 .right-section .dark-mode span{
@@ -40,13 +41,14 @@
     border-radius: var(--border-radius-1);
 }
 
-.nav .profile{
+ .profile{
     display: flex;
     gap: 2rem;
     text-align: right;
 }
+ 
 
-.nav .profile .profile-photo{
+ .profile .profile-photo{
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
@@ -56,6 +58,7 @@
 
 .right-section .reminders{
     margin-top: 2rem;
+
 }
 
 
@@ -76,7 +79,7 @@
 }
 
 .containerNoti{
-    margin-top: 2rem;
+    margin-top: 2%;
 }
 
 
