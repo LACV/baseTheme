@@ -121,9 +121,7 @@
                             </span>
                             <h3>Logout</h3>
                         </a>
-                        <a class="lastchild">
-                            <UserDropdown/>
-                        </a>
+                        
                         
 
 

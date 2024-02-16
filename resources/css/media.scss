@@ -1,19 +1,30 @@
 @media screen and (max-width: 1360px){
   
     .profile{
-        margin-right: calc(3rem);
+        margin-right: calc(-7rem);
         position: absolute;
     }
     .info{
+        width: 60%;
         margin-right: calc(-1rem);
     }
     .dropdownAvatar{
         top: calc(3rem);
         margin-right: calc(-1rem);
     }
-    .right-section .dark-mode{
-        margin-right: calc(18rem);
-    }  
+   
+     .Notification{
+        margin-right: calc(10rem);
+     
+    }
+    .contentNotif{
+        margin-top: calc(1.3rem);
+        margin-right: calc(-9rem);
+    }
+    .image_{
+        margin-top: calc(0.5rem);
+    }
+    
 }
 
 @media screen and (max-width: 1200px) {
@@ -40,13 +51,26 @@
         margin-top: 1.8rem;
     }
 
-    
     .profile{
-        margin-right: calc(7rem);
+        margin-right: calc(3.5rem);
     }
     .right-section .dark-mode{
-        margin-right:calc(22rem);
+        margin-right:calc(20.5rem);
     }
+
+     .Notification{
+        margin-left: calc(-22rem);
+     
+    }
+    .contentNotif{
+        margin-top: calc(1.3rem);
+        margin-right: calc(-6rem);
+    }
+    .image_{
+        margin-top: calc(0.5rem);
+    }
+    
+ 
    
 }
 
@@ -60,12 +84,17 @@
         margin-left: 1rem;
         margin-right: 1rem;
     }
-  
     .profile{
-        margin-right: calc(10rem);
+        margin-right: calc(3rem);
         position: absolute;
     }
- 
+    .right-section .dark-mode{
+        margin-left: -10rem;
+    }
+    .Notification{
+        margin-right: 2rem;
+    }
+    
 }
 
 
@@ -197,17 +226,48 @@
         margin-right: calc(-2rem);
         position: absolute;
     }
+    .right-section .nav .dark-mode{
+        margin-left: calc(-1rem);
+    }
+     .Notification{
+        left: calc(13.5rem);
+        margin-top: calc(2.5rem);
+    }
+    .contentNotif{
+        position:absolute;
+        margin-top: calc(4rem);
+        margin-right: calc(-13.5rem);
+        width: 50%;  
+    }
+    .image_{
+        margin-top: calc(1rem);
+    }
     
 
 }
 
-@media screen  and (max-width:500px){
+@media screen  and (max-width:680px){
 
     .right-section .nav .dark-mode{
-        left: 24rem;
+        margin-left: calc(-3.5rem);
     }
-
+     .Notification{
+        left: calc(13rem);
+        margin-top: calc(2.5rem);
+    }
+    .contentNotif{
+        position:absolute;
+        margin-top: calc(4rem);
+        margin-right: calc(-13.5rem);
+        width: 50%;  
+    }
+    .image_{
+        margin-top: calc(1rem);
+    }
+    
 }
+
+
 
   
 

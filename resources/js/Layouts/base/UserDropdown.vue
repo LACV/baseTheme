@@ -19,9 +19,9 @@ const logout = () => {
 </script>
 <template>
 <div class="profile" v-if="$page.props.auth.user">
-  <div class="info">
-      <p>Hola, <b>Luis Cruz</b></p>
-      <small class="text-muted">Admin</small>
+  <div class="info w-40">
+      <p><b>ibeth yuliana hernandez reyes</b></p>
+      <small class="text-muted ">Admin</small>
   </div>
  
         <div @mouseover="toggleDropdown(true)" @click="toggleDropdown()" id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" class="profile-photo">
