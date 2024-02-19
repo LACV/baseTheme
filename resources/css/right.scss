@@ -79,7 +79,7 @@
 }
 
 .containerNoti{
-    margin-top: 2%;
+    margin-top: 12%;
 }
 
 
@@ -87,13 +87,15 @@
     background-color: var(--color-white);
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     margin-bottom: 0.7rem;
-    padding: 1.4rem var(--card-padding);
+    padding: 1rem var(--card-padding);
     border-radius: var(--border-radius-2);
     box-shadow: var(--box-shadow);
     cursor: pointer;
     transition: all 0.3s ease;
+    width: 92%;
+    margin-left: 1rem;
 }
 
 .containerNoti .notification:hover{

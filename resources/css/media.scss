@@ -13,16 +13,16 @@
         margin-right: calc(-1rem);
     }
    
-     .Notification{
-        margin-right: calc(10rem);
-     
-    }
     .contentNotif{
         margin-top: calc(1.3rem);
         margin-right: calc(-9rem);
     }
     .image_{
         margin-top: calc(0.5rem);
+    }
+    .containerNoti{
+        margin-top: calc(2rem);
+        margin-right: calc(10rem);
     }
     
 }
@@ -52,15 +52,16 @@
     }
 
     .profile{
-        margin-right: calc(3.5rem);
+        width: 13rem;
+        margin-right: calc(7rem);
     }
     .right-section .dark-mode{
-        margin-right:calc(20.5rem);
+        margin-right:calc(0.1rem);
     }
 
-     .Notification{
-        margin-left: calc(-22rem);
-     
+    .containerNoti{
+        margin-top: calc(2rem);
+        margin-right: calc(22rem);
     }
     .contentNotif{
         margin-top: calc(1.3rem);
@@ -85,8 +86,8 @@
         margin-right: 1rem;
     }
     .profile{
-        margin-right: calc(3rem);
-        position: absolute;
+        width: 13rem;
+        margin-right: calc(7rem);
     }
     .right-section .dark-mode{
         margin-left: -10rem;
@@ -219,7 +220,8 @@
     }
 
     .profile{
-        margin-right: calc(1rem);
+        width: 13rem;
+        margin-right: calc(-9rem);
     }
     .dropdownAvatar{
         margin-top:calc(0.5rem);
@@ -230,7 +232,7 @@
         margin-left: calc(-1rem);
     }
      .Notification{
-        left: calc(13.5rem);
+        left: calc(17.5rem);
         margin-top: calc(2.5rem);
     }
     .contentNotif{
@@ -242,17 +244,20 @@
     .image_{
         margin-top: calc(1rem);
     }
-    
-
 }
 
 @media screen  and (max-width:680px){
+    .dropdownAvatar{
+        margin-top:calc(0.5rem);
+        margin-right: calc(8rem);
+        position: absolute;
+    }
 
     .right-section .nav .dark-mode{
         margin-left: calc(-3.5rem);
     }
      .Notification{
-        left: calc(13rem);
+        left: calc(18.5rem);
         margin-top: calc(2.5rem);
     }
     .contentNotif{
