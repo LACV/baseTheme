@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import ContainerNotification from '@/Components/ContainerNotification.vue';
 
 const isOpen= ref(false);
 
@@ -38,60 +39,14 @@ const toggleDropdown = (forceClose = false) => {
           <div class="block px-4 py-2  text-center cursor-pointer text-primary dark:text-primary">
           Notifications
           </div>
-          <div class="notification deactive">
-                
-                <div class="icon">
-                    <span class="material-icons-sharp">
-                        volume_up
-                    </span>
-                </div>
-                <div class="content">
-                    <div class="info">
-                        <h3>Workshop</h3>
-                        <small class="text_muted">
-                            08:00 AM - 12:00 PM
-                        </small>
-                    </div>
-                    <span class="material-icons-sharp">
-                        more_vert
-                    </span>
-                </div>
-          </div>
-          <div class="notification deactive">
-                
-                <div class="icon">
-                  <span class="material-icons-sharp">
-                            edit
-                        </span>
-                </div>
-                <div class="content">
-                    <div class="info">
-                        <h3>Workshop</h3>
-                        <small class="text_muted">
-                            08:00 AM - 12:00 PM
-                        </small>
-                    </div>
-                    <span class="material-icons-sharp">
-                        more_vert
-                    </span>
-                </div>
-          </div>
-
-                      
-            <div class="notification add-reminder">
-                <div>
-                    <span class="material-icons-sharp">
-                        add
-                    </span>
-                    <h3>Add Reminder</h3>
-                </div>
-            </div> 
-          
+             <ContainerNotification EstadoNofication="true" />
+             <ContainerNotification EstadoNofication="false" />
+            
             <a href="#" class="block px-4 py-2  text-center  text-gray-7800  hover:text-info dark:hover:text-info dark:text-gray-500">
             <div class="inline-flex items-center ">
-              <svg class="w-3 h-3 me-2" aria-hidden="true"  fill="currentColor" viewBox="0 0 20 14">
-                <span class="material-icons-sharp text-lg mr-1">visibility</span>
-              </svg>
+            <span class="material-icons-sharp text-lg mr-1">
+                visibility
+            </span>
                 View all
             </div>
             </a>
