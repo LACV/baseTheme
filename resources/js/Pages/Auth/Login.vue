@@ -38,7 +38,6 @@ const submit = () => {
     
         <template #logo>
             <LogoApp />
-            <hr class="mb-10">
         </template>
 
 
@@ -80,7 +79,7 @@ const submit = () => {
                     <span class="ms-2 text-sm font-bold  text-gray-900">Remember me</span>
                 </label>
             </div>
-
+            
             <div class="flex items-center justify-end mt-4">
 
                 <Buttons class="ms-4" colorButton="primary" maxWidthButton="full" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
