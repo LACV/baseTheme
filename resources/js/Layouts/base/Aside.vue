@@ -121,11 +121,6 @@
                             </span>
                             <h3>Logout</h3>
                         </a>
-                        
-                        
-
-
-                    </div>
-            
+                    </div>        
         </aside>
 </template>

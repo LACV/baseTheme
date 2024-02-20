@@ -36,7 +36,7 @@ const logout = () => {
 
         <!-- Main Content -->
         <main class="my-app">
-            <h1>Formulario </h1>
+            <h1>{{ title ,'' }}</h1>
             <!-- Recent Orders Table -->
             <div class="containerMain">
                 <slot />
