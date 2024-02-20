@@ -2,6 +2,8 @@
 import { Head, Link } from '@inertiajs/vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
 import Buttons from '@/Components/Buttons.vue';
+import LogoApp from '@/Components/LogoApp.vue';
+import Card from '@/Components/Card.vue';
 
 defineProps({
     canLogin: Boolean,
