@@ -10,7 +10,7 @@
     }
     .dropdownAvatar{
         top: calc(3rem);
-        margin-right: calc(-1rem);
+        margin-right: calc(1.5rem);
     }
    
     .contentNotif{
@@ -54,6 +54,9 @@
     .profile{
         width: 13rem;
         margin-right: calc(7rem);
+    }
+    .dropdownAvatar{
+        margin-right: calc(-1.5rem);
     }
     .right-section .dark-mode{
         margin-right:calc(0.1rem);
@@ -225,7 +228,7 @@
     }
     .dropdownAvatar{
         margin-top:calc(0.5rem);
-        margin-right: calc(-2rem);
+        margin-right: calc(8rem);
         position: absolute;
     }
     .right-section .nav .dark-mode{
@@ -239,7 +242,8 @@
         position:absolute;
         margin-top: calc(4rem);
         margin-right: calc(-13.5rem);
-        width: 50%;  
+        width: auto;  
+        height: 18.5rem; 
     }
     .image_{
         margin-top: calc(1rem);
@@ -247,12 +251,6 @@
 }
 
 @media screen  and (max-width:680px){
-    .dropdownAvatar{
-        margin-top:calc(0.5rem);
-        margin-right: calc(8rem);
-        position: absolute;
-    }
-
     .right-section .nav .dark-mode{
         margin-left: calc(-3.5rem);
     }
@@ -264,7 +262,8 @@
         position:absolute;
         margin-top: calc(4rem);
         margin-right: calc(-13.5rem);
-        width: 50%;  
+        width: auto;  
+        height: 18.5rem;
     }
     .image_{
         margin-top: calc(1rem);

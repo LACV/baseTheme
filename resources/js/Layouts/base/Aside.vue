@@ -115,7 +115,7 @@
                             </span>
                             <h3>New Login</h3>
                         </a>
-                        <a href="#" @click="logout" >
+                        <a href="#" @click="logout" class="lastchild" >
                             <span class="material-icons-sharp">
                                 logout
                             </span>
