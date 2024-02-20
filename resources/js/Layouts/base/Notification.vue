@@ -1,23 +1,43 @@
 <script setup>
 import { ref } from 'vue';
+import { computed } from 'vue';
 import ContainerNotification from '@/Components/ContainerNotification.vue';
 
 const isOpen= ref(false);
 
-const toggleDropdown = (forceClose = false) => {
+const toggleNotification = (forceClose = false) => {
   if (forceClose) {
     isOpen.value = false;
   } else {
     isOpen.value = !isOpen.value;
   }
 }
+
+const props = defineProps({
+    Estado: {
+        type: Boolean,
+        default: false,
+    },
+
+});
+
+const EstadoClass = computed(()=>{
+    return{
+        false:'',
+        true:'Bubble',
+    }[props.Estado];
+})
 </script>
 <template>
-    <div class="containerNoti" v-if="$page.props.auth.user">
-        <div @mouseover="toggleDropdown(true)" @click="toggleDropdown()" id="Notification" data-dropdown-toggle="Notification" class="Notification relative top-[-30px] cursor-pointer hover:text-primary dark:hover:text-primary dark:text-gray-500">
-            <span class="material-icons-sharp ml-5">
-                notifications
+    <div class="containerNoti" v-if="$page.props.auth.user" :class="EstadoClass">
+        <div  @click="toggleNotification()" id="Notification" data-dropdown-toggle="Notification" class="Notification relative top-[-30px] cursor-pointer hover:text-primary dark:hover:text-primary dark:text-gray-500" >
+            <span class="Bubble material-icons-sharp" v-if="Estado">
+            chat_bubble
             </span>
+            <span class="material-icons-sharp" v-else>
+            mark_chat_unread
+            </span>
+           
         </div>
         <div v-if="isOpen"  id="Notification" 
                         class="contentNotif
@@ -26,23 +46,26 @@ const toggleDropdown = (forceClose = false) => {
                               top-[9%]
                               right-60
                               bg-white 
-                              divide-y 
-                              divide-primary
                               rounded-lg 
                               shadow 
                               w-full
+                              h-[40%]
+                              overflow-auto
                               z-10 
                               max-w-sm
-                              dark:bg-gray-200 
-                              dark:divide-primary"
-                              @mouseleave="toggleDropdown(false)">
+                              dark:bg-gray-200"
+                              @mouseleave="toggleNotification(false)">
           <div class="block px-4 py-2  text-center cursor-pointer text-primary dark:text-primary">
           Notifications
           </div>
              <ContainerNotification EstadoNofication="true" />
-             <ContainerNotification EstadoNofication="false" />
+             <ContainerNotification EstadoNofication="true" />
+             <ContainerNotification EstadoNofication="true" />
+             <ContainerNotification EstadoNofication="true" />
             
-            <a href="#" class="block px-4 py-2  text-center  text-gray-7800  hover:text-info dark:hover:text-info dark:text-gray-500">
+             
+            
+            <a href="#" class="block px-4 py-2  text-center  text-gray-600  hover:text-primary dark:hover:text-primary dark:text-gray-500">
             <div class="inline-flex items-center ">
             <span class="material-icons-sharp text-lg mr-1">
                 visibility

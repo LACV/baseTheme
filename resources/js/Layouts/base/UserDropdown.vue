@@ -20,7 +20,7 @@ const logout = () => {
 <template>
 <div class="profile" v-if="$page.props.auth.user">
   <div class="info w-40">
-      <p><b>ibeth yuliana hernandez reyes</b></p>
+      <p><b>yuliana hernandez</b></p>
       <small class="text-muted ">Admin</small>
   </div>
  
