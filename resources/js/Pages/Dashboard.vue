@@ -4,7 +4,6 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 import Welcome from '@/Components/Welcome.vue';
 import PopUp from '@/Components/PopUp.vue'
 import Buttons from '@/Components/Buttons.vue'
-import ButtonNew from '@/Components/ButtonNew.vue'
 import * as usePopUp from '@/usePopUp.js';
 
 </script>
@@ -13,9 +12,6 @@ import * as usePopUp from '@/usePopUp.js';
 
   <AppLayout title="Dashboard">
     
-   <ButtonNew/>
-   <ButtonNew/>
-
     <h1 class="mt-10 mb-10">Button Width Auto</h1>
 
     <Buttons @click="usePopUp.toggleShowClose">
@@ -53,6 +49,10 @@ import * as usePopUp from '@/usePopUp.js';
 
     <Buttons colorButton="p">
       Button Purple 
+    </Buttons>
+
+    <Buttons colorButton="bnt">
+      <span>Button</span>
     </Buttons>
     
 
