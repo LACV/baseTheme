@@ -15,30 +15,30 @@ defineProps({
 
 <template>
     <Head title="Welcome" />
-    <Card>
-    
-    <template #logo>
-        <LogoApp />
-    </template>
+    <AppLayout title="Welcome">
+        <Card>
+            <template #logo>
+                <LogoApp />
+            </template>
 
-        <AppLayout title="Welcome">
-                <div v-if="canLogin" class="sm:fixed sm:top-0 sm:end-0 p-6 text-end z-10">
             
-                </div>
-                <Buttons colorButton="s" v-if="$page.props.auth.user">
-                    Iniciar 
-                </Buttons>
+            <div v-if="canLogin" class="sm:fixed sm:top-0 sm:end-0 p-6 text-end z-10">   
+            </div>
+            <Buttons colorButton="s" link href="dashboard" v-if="$page.props.auth.user">
+                Iniciar 
+            </Buttons>
 
-                <template v-else>
-                    <Buttons colorButton="w" @click="route('login')" >
+            <template v-else>
+                <Buttons colorButton="w" link href="login" >
                     Iniciar Sesión
-                    </Buttons>
-                </template>
-        </AppLayout>
-    </Card>
-
-
-
+                </Buttons>
+                <Buttons colorButton="p" link href="register" >
+                    Registrar Usuario
+                </Buttons>
+            </template>
+            
+        </Card>
+    </AppLayout>
 </template>
 
 <style>
