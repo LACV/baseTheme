@@ -46,8 +46,8 @@ const logout = () => {
                               dark:divide-primary"
                               @mouseleave="toggleDropdown(false)">
           <div class="px-4 py-3 text-sm text-gray-900 dark:text-gray-400">
-            <div>Bonnie Green</div>
-            <div class="font-medium truncate">name@flowbite.com</div>
+            <div>{{ $page.props.auth.user.name }}</div>
+            <div class="font-medium truncate">{{ $page.props.auth.user.email }}</div>
           </div>
           <ul class="py-2 text-sm text-gray-400 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
             <li>
