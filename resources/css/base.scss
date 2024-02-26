@@ -38,10 +38,10 @@
     --color-gray-900-dark: #111827;
     
 /*root del boton nuevo*/
---x: 0;
---y: 0;
---xp: 0;
---yp: 0;
+    --x: 0;
+    --y: 0;
+    --xp: 0;
+    --yp: 0;
     --hue: calc(0 + (var(--xp) * 500));
     --size: 100px;
     --glow: radial-gradient(

@@ -1,4 +1,4 @@
-.pnt_global{
+.btn_global{
     border-radius: 1rem;
     text-transform: uppercase;
     font-weight: bold;
@@ -15,7 +15,7 @@
     margin-right: 0.5rem;
 }
 
-.pnt_global::before {
+.btn_global::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -25,7 +25,7 @@
     border-radius: 1rem;
 }
 
-.pnt_global span {
+.btn_global span {
     background: var(--glow), black;
     background-clip: text;
     color: transparent;
@@ -36,11 +36,11 @@
     inset: 0;
 }
 
-:root:has(.pnt_global:active){
+:root:has(.btn_global:active){
     --size: 300px
 }
 
-.pnt_global::after {
+.btn_global::after {
     content: '';
     position: absolute;
     inset: -4px;

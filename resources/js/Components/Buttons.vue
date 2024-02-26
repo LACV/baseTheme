@@ -62,6 +62,7 @@ const colorButtonClass = computed(() => {
         'e': 'text-error border-error hover:bg-error focus:ring-error dark:border-error dark:border-error dark:text-error dark:hover:text-white dark:hover:bg-error dark:focus:ring-error',
         'g': 'text-gray-900 border-gray-800 hover:bg-gray-900 focus:ring-gray-300 dark:border-gray-500 dark:border-gray-500 dark:text-gray-500 dark:hover:text-gray-900  dark:hover:bg-gray-500 dark:focus:ring-gray-500',
         'p': 'text-purple border-purple hover:bg-purple focus:ring-purple dark:border-purple dark:border-purple dark:text-purple dark:hover:text-white dark:hover:bg-purple dark:focus:ring-purple',
+        'bnt':'btn_global',
     }[props.colorButton];
 });
 
@@ -99,7 +100,7 @@ const generateRouteUrl = (routeName) => {
     <button
         v-else
         :type="type"
-        class="       
+        class="      
         hover:text-white 
         border   
         focus:ring-4 

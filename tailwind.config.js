@@ -20,8 +20,8 @@ module.exports = {
         warning: '#cf9900',
         error: '#ff6771',
         purple: '#800080',
-
-
+        customGlow: 'var(--glow)',
+        customHue: 'var(--hue)',
 
         white:{
           DEFAULT: '#fff',  
@@ -40,6 +40,16 @@ module.exports = {
           800: 'var(--color-gray-800-dark)',
           900: 'var(--color-gray-900-dark)',
           },
+
+        spacing: {
+          'customSize': 'var(--size)',
+      },
+      backgroundSize: {
+        'customGlow': 'var(--size) var(--size)'
+      },
+      backgroundPosition: {
+        'customPosition': 'calc((var(--x) * 1px) - (var(--size) * 0.5)) calc((var(--y) * 1px) - (var(--size) * 0.5))'
+      }
 
       },
     },
