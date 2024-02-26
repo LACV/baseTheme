@@ -20,34 +20,34 @@ const logout = () => {
 <template>
 <div class="profile" v-if="$page.props.auth.user">
   <div class="info w-40">
-      <p><b>yuliana hernandez</b></p>
+      <p><b>{{ $page.props.auth.user.name }}</b></p>
       <small class="text-muted ">Admin</small>
   </div>
- 
+
         <div @mouseover="toggleDropdown(true)" @click="toggleDropdown()" id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" class="profile-photo">
         	<span class="hidden material-icons-sharp">menu</span>
           <img src="assets/images/profile-1.jpg">
         </div>
-      
-    <div v-if="isOpen"  id="dropdownAvatar" 
+
+    <div v-if="isOpen"  id="dropdownAvatar"
                         class="dropdownAvatar
-                              relative 
+                              relative
                               md:absolute
                               top-20
-                              left-81 
+                              left-81
                               right-5
-                              bg-white 
-                              divide-y 
+                              bg-white
+                              divide-y
                               divide-primary
-                              rounded-lg 
-                              shadow 
+                              rounded-lg
+                              shadow
                               w-44
-                              dark:bg-gray-200 
+                              dark:bg-gray-200
                               dark:divide-primary"
                               @mouseleave="toggleDropdown(false)">
           <div class="px-4 py-3 text-sm text-gray-900 dark:text-gray-400">
-            <div>Bonnie Green</div>
-            <div class="font-medium truncate">name@flowbite.com</div>
+            <div>{{ $page.props.auth.user.name }}</div>
+            <div class="font-medium truncate">{{ $page.props.auth.user.email }}</div>
           </div>
           <ul class="py-2 text-sm text-gray-400 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
             <li>
@@ -70,6 +70,6 @@ const logout = () => {
       </div>
 </div>
 
-</template>  
+</template>
 
 

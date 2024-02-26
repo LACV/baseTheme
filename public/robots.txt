@@ -1,2 +1,5 @@
 User-agent: *
-Disallow:
+Disallow: /vendor/
+Disallow: /node_modules/
+Disallow: /storage/
+Disallow: /bootstrap/

@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue';
 import { onMounted, onBeforeUnmount } from 'vue';
+import { Link } from '@inertiajs/vue3';
 
 const syncPointer = ({ x: pointerX, y: pointerY }) => {
   const x = pointerX.toFixed(2);
@@ -33,6 +34,14 @@ const props = defineProps({
         type: String,
         default: '',
     },
+    link:{
+        type:Boolean,
+        default:false,
+    },
+    href: {
+        type:String,
+        default:'',
+    }
 
 });
 
@@ -57,11 +66,39 @@ const colorButtonClass = computed(() => {
     }[props.colorButton];
 });
 
+// Método para generar la URL de la ruta basado en el nombre de la ruta
+const generateRouteUrl = (routeName) => {
+    return route(routeName);
+};
 
 </script>
 
 <template>
-    <button 
+
+    <Link 
+        v-if="link"
+        class="       
+            hover:text-white 
+            border   
+            focus:ring-4 
+            focus:outline-none  
+            font-bold 
+            rounded-lg 
+            text-sm 
+            px-5 
+            py-2.5 
+            text-center 
+            me-2 
+            mb-2 
+            " 
+        :href="generateRouteUrl(href)" 
+        :class="colorButtonClass,maxWidthButtonClass"
+     >
+        <slot />
+    </Link>
+
+    <button
+        v-else
         :type="type"
         class="      
         hover:text-white 
@@ -77,9 +114,10 @@ const colorButtonClass = computed(() => {
         me-2 
         mb-2 
         " 
-        :class="colorButtonClass,maxWidthButtonClass"
-        
-        >
-        <slot/>
+        :class="colorButtonClass,maxWidthButtonClass"       
+    >
+        <slot />
     </button>
+
+    
 </template>
