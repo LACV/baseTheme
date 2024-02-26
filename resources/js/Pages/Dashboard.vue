@@ -50,12 +50,27 @@ import * as usePopUp from '@/usePopUp.js';
       Button Purple 
     </Buttons>
 
-    <Buttons colorButton="glow-d" maxWidthButton>
+    <Buttons colorButton="glow-d">
       Button Glow Danger
     </Buttons>
 
     <Buttons colorButton="glow-w">
       Button Glow Warning
+    </Buttons>
+    <Buttons colorButton="glow-pr">
+      Button Glow Danger
+    </Buttons>
+    <Buttons colorButton="glow-s">
+      Button Glow Danger
+    </Buttons>
+    <Buttons colorButton="glow-su">
+      Button Glow Danger
+    </Buttons>
+    <Buttons colorButton="glow-i">
+      Button Glow Danger
+    </Buttons>
+    <Buttons colorButton="glow-pu">
+      Button Glow Danger
     </Buttons>
     
 

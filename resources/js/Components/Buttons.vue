@@ -62,6 +62,11 @@ const colorButtonClass = computed(() => {
         'e': 'text-error border-error hover:bg-error focus:ring-error dark:border-error dark:border-error dark:text-error dark:hover:text-white dark:hover:bg-error dark:focus:ring-error',
         'g': 'text-gray-900 border-gray-800 hover:bg-gray-900 focus:ring-gray-300 dark:border-gray-500 dark:border-gray-500 dark:text-gray-500 dark:hover:text-gray-900  dark:hover:bg-gray-500 dark:focus:ring-gray-500',
         'p': 'text-purple border-purple hover:bg-purple focus:ring-purple dark:border-purple dark:border-purple dark:text-purple dark:hover:text-white dark:hover:bg-purple dark:focus:ring-purple',
+        'glow-pr':'btn_glow btn_glow_pr focus:ring-primary focus:border-primary',
+        'glow-s':'btn_glow btn_glow_s focus:ring-secondary focus:border-secondary',
+        'glow-su':'btn_glow btn_glow_su focus:ring-success focus:border-success',
+        'glow-i':'btn_glow btn_glow_i focus:ring-info focus:border-info',
+        'glow-pu':'btn_glow btn_glow_pu focus:ring-purple focus:border-purple',
         'glow-w':'btn_glow btn_glow_w focus:ring-warning focus:border-warning' ,
         'glow-d':'btn_glow btn_glow_d focus:ring-error focus:border-error',
     }[props.colorButton];

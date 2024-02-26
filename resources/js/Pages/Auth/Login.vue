@@ -81,13 +81,13 @@ const submit = () => {
             </div>
             
             <div class="flex items-center justify-end mt-4">
-                <Buttons colorButton="e" maxWidthButton="full" link href="welcome" >
+                <Buttons colorButton="e" maxWidthButton  link href="welcome" >
                     Cancelar
                 </Buttons>
             </div>
             <div class="flex items-center justify-end mt-4">
 
-            <Buttons class="ms-4" colorButton="primary" maxWidthButton="full" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+            <Buttons class="ms-4" colorButton="primary" maxWidthButton  :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                 Log in
             </Buttons>
             </div>
