@@ -50,6 +50,86 @@ Before getting started, ensure you have the following installed:
 
 3. Open your web browser and navigate to `http://localhost:8000` to access the BaseTheme dashboard.
 
+## Buttons
+1. Importación del componente Buttons: 
+   Utilizamos la directiva 
+ ```bash
+   <script setup>
+   import Buttons from '@/components/buttons.vue';
+   </script>
+```
+2. Using the Buttons component:
+   In the  `<template>` block, we call the  `<Buttons> ` component and add a title inside it.
+```bash
+   <template>
+   <Buttons>
+      Botón
+   </Buttons>
+   </template>
+```
+## Button Customization
+1. Specify button color:
+   To specify the color of the button, we use the `colorButton` class.
+```bash
+   <Buttons colorButton="primary">
+   Button Primary
+   </Buttons>
+
+```
+2. Types of Colors for the Button:
+   We can use different values ​​for the `colorButton` attribute for different types of colors:
+```bash
+   "primary" color primary
+   "secondary" color secondary
+   "i" color info
+   "g" color gray
+   "s" color success
+   "e" color danger
+   "w" color warning
+   "p" color purple
+   "glow-d" color glow danger
+   "glow-w" color glow warning
+   "glow-pr" color glow primary
+   "glow-pu" color glow purple
+   "glow-s" color glow secondary
+   "glow-su" color glow success
+   "glow-i" color glow info
+```
+3. Specify Button Width:
+   To specify the width of the button, we use the `maxwidthButton` attribute.
+```bash
+ <Buttons colorButton="primary" maxwidthButton>
+  Button Primary
+</Buttons>
+```
+## Popup
+1. Import of the Popup component:
+   We use the directive
+```bash
+<script setup>
+   import Popup from '@/components/Popup.vue';
+</script>
+```
+2. Using the Popup component:
+   In the `<template>` block, we call the `<Popup>` component
+```bash
+<PopUp title="Title Form" maxWidth="sm">
+   <template #buttonForm>
+      <Buttons colorButton="e"  @click="usePopUp.toggleShowClose"  >
+            Cancelar
+      </Buttons>
+      <Buttons colorButton="s">
+            Guardar
+      </Buttons>
+   </template>
+   </PopUp> 
+
+   <Buttons @click="usePopUp.toggleShowClose">
+      Button Open Modal
+    </Buttons>
+This code will allow us to open the popup,
+```
+
 ## Contributing
 
 Contributions are welcome! Feel free to submit pull requests or open issues on the [GitHub repository](https://github.com/LACV/baseTheme).
