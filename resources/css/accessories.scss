@@ -1,32 +1,52 @@
-.btn_global{
+.btn_glow{
     border-radius: 1rem;
-    text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 0.1ch;
-    background: var(--color-white);
     border: 4px solid transparent;
     box-shadow: 0 1px hsl(0 0% 100% / 0.15) inset;
     cursor: pointer;
-    background: linear-gradient(var(--color-white), var(--color-white)) padding-box, var(--glow), linear-gradient(black, black) border-box;
     transition: background-size 0.24;
+    background: linear-gradient(var(--color-white), var(--color-white)) padding-box, var(--glow), linear-gradient(black, black) border-box;
     touch-action: none;
     position: relative;
     padding: 1rem 2rem;
     margin-right: 0.5rem;
 }
 
-.btn_global::before {
+.btn_glow_d{
+    --glow: radial-gradient(
+        50% 50% at center,
+        var(--color-danger),
+        var(--color-danger),
+        transparent
+    )
+    calc((var(--x) * 1px) - (var(--size) * 0.6))
+    calc((var(--y) * 1px) - (var(--size) * 0.6)) / var(--size) var(--size) no-repeat fixed; 
+}
+
+.btn_glow_w{
+    --glow: radial-gradient(
+        50% 50% at center,
+        var(--color-warning),
+        var(--color-warning),
+        transparent
+    )
+    calc((var(--x) * 1px) - (var(--size) * 0.6))
+    calc((var(--y) * 1px) - (var(--size) * 0.6)) / var(--size) var(--size) no-repeat fixed;
+}
+
+.btn_glow::before {
     content: '';
     position: absolute;
     inset: 0;
     box-shadow: 0 1px hsl(0 0% 100% / 0.15%) inset;
-    background: var(--color-white);
+    background: none;
     z-index: 2;
     border-radius: 1rem;
 }
 
-.btn_global span {
-    background: var(--glow), black;
+.btn_glow span {
+    background: var(--glow), var(--color-dark);
     background-clip: text;
     color: transparent;
     height: 100%;
@@ -36,11 +56,11 @@
     inset: 0;
 }
 
-:root:has(.btn_global:active){
+:root:has(.btn_glow:active){
     --size: 300px
 }
 
-.btn_global::after {
+.btn_glow::after {
     content: '';
     position: absolute;
     inset: -4px;

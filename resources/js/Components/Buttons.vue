@@ -31,8 +31,8 @@ const props = defineProps({
         default: 'primary',
     },
     maxWidthButton: {
-        type: String,
-        default: '',
+        type: Boolean,
+        default: false,
     },
     link:{
         type:Boolean,
@@ -47,8 +47,8 @@ const props = defineProps({
 
 const maxWidthButtonClass = computed(()=>{
     return{
-        '':'',
-        'full':'w-full ',
+        'false':'',
+        'true':'w-full',
     }[props.maxWidthButton];
 })
 
@@ -58,11 +58,12 @@ const colorButtonClass = computed(() => {
         'secondary':'text-secondary border-secondary hover:bg-secondary focus:ring-secondary dark:border-secondary dark:border-secondary dark:text-secondary dark:hover:text-white dark:hover:bg-secondary dark:focus:ring-secondary',
         's': 'text-success border-success hover:bg-success focus:ring-success dark:border-success dark:border-success dark:text-success dark:hover:text-white dark:hover:bg-success dark:focus:ring-success',
         'i': 'text-info border-info hover:bg-info focus:ring-info dark:border-info dark:border-info dark:text-info dark:hover:text-white dark:hover:bg-info dark:focus:ring-info',
-        'w': 'text-warning border-warning hover:bg-warning focus:ring-warning dark:border-warning dark:border-info dark:text-warning dark:hover:text-white dark:hover:bg-warning dark:focus:ring-warning',
+        'w': 'text-warning border-warning hover:bg-warning focus:ring-warning dark:border-warning dark:border-warning dark:text-warning dark:hover:text-white dark:hover:bg-warning dark:focus:ring-warning',
         'e': 'text-error border-error hover:bg-error focus:ring-error dark:border-error dark:border-error dark:text-error dark:hover:text-white dark:hover:bg-error dark:focus:ring-error',
         'g': 'text-gray-900 border-gray-800 hover:bg-gray-900 focus:ring-gray-300 dark:border-gray-500 dark:border-gray-500 dark:text-gray-500 dark:hover:text-gray-900  dark:hover:bg-gray-500 dark:focus:ring-gray-500',
         'p': 'text-purple border-purple hover:bg-purple focus:ring-purple dark:border-purple dark:border-purple dark:text-purple dark:hover:text-white dark:hover:bg-purple dark:focus:ring-purple',
-        'bnt':'btn_global',
+        'glow-w':'btn_glow btn_glow_w focus:ring-warning focus:border-warning' ,
+        'glow-d':'btn_glow btn_glow_d focus:ring-error focus:border-error',
     }[props.colorButton];
 });
 
@@ -80,7 +81,7 @@ const generateRouteUrl = (routeName) => {
         class="       
             hover:text-white 
             border   
-            focus:ring-4 
+            focus:ring-3 
             focus:outline-none  
             font-bold 
             rounded-lg 
@@ -116,7 +117,9 @@ const generateRouteUrl = (routeName) => {
         " 
         :class="colorButtonClass,maxWidthButtonClass"       
     >
-        <slot />
+        <span>  
+            <slot />
+        </span>
     </button>
 
     

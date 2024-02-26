@@ -17,8 +17,7 @@ import * as usePopUp from '@/usePopUp.js';
     <Buttons @click="usePopUp.toggleShowClose">
       Button Open Modal
     </Buttons>  
-
-    
+  
     <Buttons colorButton="primary">
       Button Primary
     </Buttons>
@@ -51,8 +50,12 @@ import * as usePopUp from '@/usePopUp.js';
       Button Purple 
     </Buttons>
 
-    <Buttons colorButton="bnt">
-      <span>Button</span>
+    <Buttons colorButton="glow-d" maxWidthButton>
+      Button Glow Danger
+    </Buttons>
+
+    <Buttons colorButton="glow-w">
+      Button Glow Warning
     </Buttons>
     
 
@@ -69,39 +72,39 @@ import * as usePopUp from '@/usePopUp.js';
     
     <h1 class="mt-10 mb-10">Button Class=W-Full</h1>
 
-    <Buttons @click="usePopUp.toggleShowClose" maxWidthButton="full">
+    <Buttons @click="usePopUp.toggleShowClose" maxWidthButton>
       Button Open Modal
     </Buttons>  
     
-    <Buttons colorButton="primary" maxWidthButton="full">
+    <Buttons colorButton="primary" maxWidthButton>
       Button Primary
     </Buttons>
 
-    <Buttons colorButton="secondary" maxWidthButton="full">
+    <Buttons colorButton="secondary" maxWidthButton>
       Button Secondary
     </Buttons>
 
-    <Buttons colorButton="i" maxWidthButton="full">
+    <Buttons colorButton="i" maxWidthButton>
       Button Info
     </Buttons>  
 
-    <Buttons colorButton="g" maxWidthButton="full">
+    <Buttons colorButton="g" maxWidthButton>
       Button Gray
     </Buttons> 
 
-    <Buttons colorButton="s" maxWidthButton="full">
+    <Buttons colorButton="s" maxWidthButton>
       Button Success 
     </Buttons>
 
-    <Buttons colorButton="e" maxWidthButton="full">
+    <Buttons colorButton="e" maxWidthButton>
       Button Error 
     </Buttons>
 
-    <Buttons colorButton="w" maxWidthButton="full">
+    <Buttons colorButton="w" maxWidthButton>
       Button Warning 
     </Buttons>
 
-    <Buttons colorButton="p" maxWidthButton="full">
+    <Buttons colorButton="p" maxWidthButton>
       Button Purple 
     </Buttons>
    
