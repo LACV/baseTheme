@@ -18,7 +18,7 @@ module.exports = {
         info: '#009aff',
         success: '#00d492',
         warning: '#cf9900',
-        error: '#ff6771',
+        error: 'var(--color-danger)',
         purple: '#800080',
         customGlow: 'var(--glow)',
         customHue: 'var(--hue)',
