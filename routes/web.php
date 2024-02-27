@@ -23,8 +23,12 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
-    Route::get('/prueba',function(){
+    Route::get('/table',function(){
         return Inertia::render('Prueba');
-    })->name('prueba');
+    })->name('tables');
+
+    Route::get('/profile',function(){
+        return Inertia::render('Profile/Show');
+    })->name('profile');
 });
 

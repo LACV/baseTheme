@@ -31,15 +31,14 @@ const submit = () => {
 </script>
 
 <template>
+
 <Head title="Log in" />
 <appLayout>
 
-    <Card>
-    
+    <Card>    
         <template #logo>
             <LogoApp />
         </template>
-
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
             {{ status }}
@@ -79,18 +78,18 @@ const submit = () => {
                     <span class="ms-2 text-sm font-bold  text-gray-900">Remember me</span>
                 </label>
             </div>
-            
-            <div class="flex items-center justify-end mt-4">
-                <Buttons colorButton="e" maxWidthButton="full" link href="welcome" >
+            <div class="flex items-center mt-4">
+                
+                <Buttons class="ms-4" colorButton="primary" maxWidthButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                    Log in
+                </Buttons>
+            </div>
+            <div class="flex items-center">
+                <Buttons colorButton="e" maxWidthButton link href="welcome" >
                     Cancelar
                 </Buttons>
             </div>
-            <div class="flex items-center justify-end mt-4">
 
-            <Buttons class="ms-4" colorButton="primary" maxWidthButton="full" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                Log in
-            </Buttons>
-            </div>
         </form>
     </Card>
 </appLayout>

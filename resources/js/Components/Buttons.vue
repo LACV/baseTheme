@@ -95,7 +95,9 @@ const generateRouteUrl = (routeName) => {
         :href="generateRouteUrl(href)" 
         :class="colorButtonClass,maxWidthButtonClass"
      >
-        <slot />
+        <span>
+            <slot />
+        </span>        
     </Link>
 
     <button

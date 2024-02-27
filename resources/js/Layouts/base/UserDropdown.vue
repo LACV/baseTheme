@@ -51,10 +51,10 @@ const logout = () => {
           </div>
           <ul class="py-2 text-sm text-gray-400 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
             <li>
-              <a class="flex items-center px-4 py-2 ml-3 hover:bg-gray-200 hover:text-primary dark:hover:text-primary dark:text-gray-500">
+              <Link :href="route('profile')" class="flex items-center px-4 py-2 ml-3 hover:bg-gray-200 hover:text-primary dark:hover:text-primary dark:text-gray-500">
                 <span class="material-icons-sharp mr-2">person</span>
                 <h3 class="inline-block">Profile</h3>
-              </a>
+              </Link>
               <a class="flex items-center px-4 py-2 ml-3 hover:bg-gray-200 hover:text-primary dark:hover:text-primary dark:text-gray-500">
                 <span class="material-icons-sharp mr-2">settings</span>
                 <h3 class="inline-block">Settings</h3>
@@ -62,7 +62,7 @@ const logout = () => {
             </li>
           </ul>
           <div class="py-2">
-            <a @click="logout" class="flex items-center px-4 py-2 ml-3 hover:bg-gray-200 hover:text-primary dark:hover:text-primary dark:text-gray-500">
+            <a @click="logout" class="cursor-pointer flex items-center px-4 py-2 ml-3 hover:bg-gray-200 hover:text-primary dark:hover:text-primary dark:text-gray-500">
                 <span class="material-icons-sharp mr-2">logout</span>
                 <h3 class="inline-block">Sign out</h3>
               </a>

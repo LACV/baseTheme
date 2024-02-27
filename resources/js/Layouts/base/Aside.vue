@@ -1,9 +1,14 @@
 <script setup>
     import { ref, onMounted, onBeforeUnmount} from 'vue';
-    import * as asideMenu from '@/useAsideSetup.js';
-    import UserDropdown from '@/Layouts/base/UserDropdown.vue';   
+    import * as asideMenu from '@/useAsideSetup.js'; 
     import { Head, Link, router } from '@inertiajs/vue3';
+    import LogoApp from '@/Components/LogoApp.vue';
     
+
+    const isRouteActive = (routeName) =>{
+        return route().current(routeName);
+    }
+
     const logout = () => {
         router.post(route('logout'));
     };
@@ -16,7 +21,7 @@
             }">
                     <div class="toggle">
                         <div class="logo">
-                            <img src="assets/images/logo.png">
+                            <LogoApp/>
                             <h2>Stock<span class="primary">Voult</span></h2>
                         </div>
                     
@@ -27,18 +32,19 @@
                     </div>
 
                     <div class="sidebar" v-if="$page.props.auth.user">
-                        <a href="#">
+                        <Link :href="route('dashboard')" :class="{ 'active': isRouteActive('dashboard') }" >
                             <span class="material-icons-sharp">
                                 dashboard
                             </span>
                             <h3>Dashboard</h3>
-                        </a>
-                        <a href="#">
+                        </Link>
+
+                        <Link :href="route('tables')" :class="{ 'active': isRouteActive('tables') }">
                             <span class="material-icons-sharp">
                                 person_outline
                             </span>
-                            <h3>Users</h3>
-                        </a>
+                            <h3>Tablas</h3>
+                        </Link>
                     
                         <a href="#">
                             <span class="material-icons-sharp">
@@ -48,7 +54,7 @@
                         </a>
                         
                     <div class="submenu">
-                        <a class="active">
+                        <a>
                                     <span class="material-icons-sharp">
                                         insights
                                     </span>
@@ -56,7 +62,7 @@
                             <div class="submenu-items">   
                                     <a class="item">
                                         <span class="material-icons-sharp">
-                                                   featured_play_list
+                                            featured_play_list
                                         </span>
                                         <h3>Category 1</h3> 
                                     </a>

@@ -5,13 +5,11 @@ import Aside from '@/Layouts/base/Aside.vue';
 import Right from '@/Layouts/base/Right.vue';
 import Main from '@/Layouts/base/Main.vue';
 
-
+const appName = import.meta.env.VITE_APP_NAME;
 
 defineProps({
     title: String,
 });
-
-const showingNavigationDropdown = ref(false);
 
 const switchToTeam = (team) => {
     router.put(route('current-team.update'), {
@@ -49,7 +47,7 @@ const logout = () => {
         <Right/>
 
         <div class="footer">
-            <p>Copyright © LACV <a href="#" target="_blank">LACVCruz</a> 2024</p>
+            <p>Copyright © <a href="#" target="_blank">{{ appName || 'baseTheme' }}</a> 2024</p>
         </div>
 
     </div>

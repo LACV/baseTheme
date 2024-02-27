@@ -7,16 +7,18 @@ aside .toggle{
     align-items: center;
     justify-content: space-between; 
     margin-top: 1.4rem;
+    
 }
 
-aside .toggle .logo{
+.logo{
     display: flex;
+    align-items: center;
     gap: 0.5rem;
 }
 
-aside .toggle .logo img{
-    width: 2rem;
-    height: 2rem;
+.logo img{
+    width: 4rem;
+    height: 4rem;
 }
 
 aside .toggle .close{
