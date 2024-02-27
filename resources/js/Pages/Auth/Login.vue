@@ -78,6 +78,13 @@ const submit = () => {
                     <span class="ms-2 text-sm font-bold  text-gray-900">Remember me</span>
                 </label>
             </div>
+
+            <div class="block mt-4">
+                <label class="flex items-center">
+                    <Checkbox v-model:checked="form.remember" name="remember" />
+                    <span class="ms-2 text-sm font-bold  text-gray-900">Remember me</span>
+                </label>
+            </div>
             <div class="flex items-center mt-4">
                 
                 <Buttons class="ms-4" colorButton="primary" maxWidthButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
@@ -89,6 +96,7 @@ const submit = () => {
                     Cancelar
                 </Buttons>
             </div>
+
 
         </form>
     </Card>
