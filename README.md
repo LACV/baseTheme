@@ -51,8 +51,8 @@ Before getting started, ensure you have the following installed:
 3. Open your web browser and navigate to `http://localhost:8000` to access the BaseTheme dashboard.
 
 ## Buttons
-1. Importación del componente Buttons: 
-   Utilizamos la directiva 
+1. Buttons component import:
+   We use the directive
  ```bash
    <script setup>
    import Buttons from '@/components/buttons.vue';
