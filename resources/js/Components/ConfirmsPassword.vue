@@ -1,9 +1,8 @@
 <script setup>
 import { ref, reactive, nextTick } from 'vue';
 import DialogModal from './DialogModal.vue';
-import InputError from './InputError.vue';
-import PrimaryButton from './PrimaryButton.vue';
-import SecondaryButton from './SecondaryButton.vue';
+import ErrorMsj from '@/Components/ErrorMsj.vue';
+import Buttons from '@/Components/Buttons.vue';
 import TextInput from './TextInput.vue';
 
 const emit = defineEmits(['confirmed']);
@@ -95,23 +94,23 @@ const closeModal = () => {
                         @keyup.enter="confirmPassword"
                     />
 
-                    <InputError :message="form.error" class="mt-2" />
+                    <ErrorMsj :message="form.error" class="mt-2" />
                 </div>
             </template>
 
             <template #footer>
-                <SecondaryButton @click="closeModal">
+                <Buttons color-button="e" @click="closeModal">
                     Cancel
-                </SecondaryButton>
+                </Buttons>
 
-                <PrimaryButton
+                <Buttons color-button="s"
                     class="ms-3"
                     :class="{ 'opacity-25': form.processing }"
                     :disabled="form.processing"
                     @click="confirmPassword"
                 >
                     {{ button }}
-                </PrimaryButton>
+                </Buttons>
             </template>
         </DialogModal>
     </span>

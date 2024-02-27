@@ -3,9 +3,9 @@ import { ref } from 'vue';
 import { useForm } from '@inertiajs/vue3';
 import ActionMessage from '@/Components/ActionMessage.vue';
 import FormSection from '@/Components/FormSection.vue';
-import InputError from '@/Components/InputError.vue';
-import InputLabel from '@/Components/InputLabel.vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
+import ErrorMsj from '@/Components/ErrorMsj.vue';
+import Label from '@/Components/Label.vue';
+import Buttons from '@/Components/Buttons.vue';
 import TextInput from '@/Components/TextInput.vue';
 
 const passwordInput = ref(null);
@@ -92,9 +92,9 @@ const updatePassword = () => {
                 Saved.
             </ActionMessage>
 
-            <PrimaryButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+            <Buttons color-button="s" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                 Save
-            </PrimaryButton>
+            </Buttons>
         </template>
     </FormSection>
 </template>

@@ -4,8 +4,9 @@ import { useForm } from '@inertiajs/vue3';
 import ActionSection from '@/Components/ActionSection.vue';
 import DangerButton from '@/Components/DangerButton.vue';
 import DialogModal from '@/Components/DialogModal.vue';
-import InputError from '@/Components/InputError.vue';
-import SecondaryButton from '@/Components/SecondaryButton.vue';
+import ErrorMsj from '@/Components/ErrorMsj.vue';
+import Label from '@/Components/Label.vue';
+import Buttons from '@/Components/Buttons.vue';
 import TextInput from '@/Components/TextInput.vue';
 
 const confirmingUserDeletion = ref(false);
@@ -78,23 +79,23 @@ const closeModal = () => {
                             @keyup.enter="deleteUser"
                         />
 
-                        <InputError :message="form.errors.password" class="mt-2" />
+                        <ErrorMsj :message="form.errors.password" class="mt-2" />
                     </div>
                 </template>
 
                 <template #footer>
-                    <SecondaryButton @click="closeModal">
+                    <Buttons color-button="e" @click="closeModal">
                         Cancel
-                    </SecondaryButton>
+                    </Buttons>
 
-                    <DangerButton
+                    <Buttons color-button="w"
                         class="ms-3"
                         :class="{ 'opacity-25': form.processing }"
                         :disabled="form.processing"
                         @click="deleteUser"
                     >
                         Delete Account
-                    </DangerButton>
+                    </Buttons>
                 </template>
             </DialogModal>
         </template>

@@ -1,3 +1,13 @@
+<script setup>
+    import { Head } from '@inertiajs/vue3';
+    import AppLayout from '@/Layouts/AppLayout.vue';
+</script>
+
 <template>
-    <h1>prueba</h1>
+    <Head title="Tables"/>
+
+    <AppLayout>
+        
+    </AppLayout>
+    
 </template>

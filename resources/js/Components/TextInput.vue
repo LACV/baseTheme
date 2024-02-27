@@ -38,7 +38,7 @@ defineExpose({ focus: () => input.value.focus() });
         "
         :value="modelValue"
         @input="$emit('update:modelValue', $event.target.value)"
-    >
+    />
 
     
 </template>
