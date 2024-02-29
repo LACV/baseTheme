@@ -79,7 +79,6 @@ const submit = () => {
                 </label>
             </div>
 
-
             <div class="flex items-center mt-4">   
                 <Buttons class="ms-4" colorButton="primary" maxWidthButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Log in

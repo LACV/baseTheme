@@ -1,29 +1,14 @@
 @media screen and (max-width: 1360px){
-  
-    .profile{
-        margin-right: calc(-7rem);
-        position: absolute;
-    }
-    .info{
-        width: 60%;
-        margin-right: calc(-1rem);
-    }
+
     .dropdownAvatar{
         top: calc(3rem);
         margin-right: calc(1.5rem);
     }
    
-    .contentNotif{
-        margin-top: calc(1.3rem);
-        margin-right: calc(-9rem);
-    }
     .image_{
         margin-top: calc(0.5rem);
     }
-    .containerNoti{
-        margin-top: calc(2rem);
-        margin-right: calc(10rem);
-    }
+
     
 }
 
@@ -51,54 +36,16 @@
         position: relative;
         margin-top: 1.8rem;
     }
-
-    .profile{
-        width: 13rem;
-        margin-right: calc(7rem);
-    }
-    .dropdownAvatar{
-        margin-right: calc(-1.5rem);
-    }
-    .right-section .dark-mode{
-        margin-right:calc(0.1rem);
-    }
-
-    .containerNoti{
-        margin-top: calc(2rem);
-        margin-right: calc(22rem);
-    }
-    .contentNotif{
-        margin-top: calc(1.3rem);
-        margin-right: calc(-6rem);
-    }
-    .image_{
-        margin-top: calc(0.5rem);
-    }
-    
- 
    
 }
 
 @media screen  and (max-width:1000px){
-    .right-section{
-        margin-top: 1.4rem;
-        margin-bottom:30rem;
-        z-index: 0;
-    } 
+
     .container{
         margin-left: 1rem;
         margin-right: 1rem;
     }
-    .profile{
-        width: 13rem;
-        margin-right: calc(7rem);
-    }
-    .right-section .dark-mode{
-        margin-left: -10rem;
-    }
-    .Notification{
-        margin-right: 2rem;
-    }
+
     
 }
 
@@ -171,51 +118,36 @@
         width: 100%;
     }
 
-
-
-    .right-section{
-        width: 94%;
-        margin: 0 auto 4rem;
-        margin-bottom:5rem;
-    }
-
-    .right-section .nav{
-        position: fixed;
-        top: 0;
-        left: 0;
-        align-items: center;
-        background-color: var(--color-white);
-        padding: 0 var(--padding-1);
-        height: 4.6rem;
+    .nav{
         width: 100%;
-        z-index: 2;
+        height: 4.6rem;
+        top: 0;
+        right: 0;
+        padding-top: 0.8rem;
+        padding-right: 4rem;
+        position: absolute; 
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: stretch;
+        gap: 2rem;
+        z-index: 2; 
+        background-color: var(--color-white);
         box-shadow: 0 1rem 1rem var(--color-light);
-        margin: 0;
+        
     }
 
-    .right-section .nav .dark-mode{
-        width: 4.4rem;
-        position: absolute;
-        left: 70%;
-    }
-
-    .right-section .profile .info{
-        display: none;
-    }
-
-
-
-    .right-section .nav button{
+    .menu-btn{
         display: inline-block;
         background-color: transparent;
         cursor: pointer;
         color: var(--color-dark);
         position: absolute;
-        left: 1rem;
-        
-        
+        left: 1rem; 
+        margin-right: 10rem;    
     }
-    .right-section .nav button span{
+
+    .menu-btn span{
         font-size: 2rem;
     }
 
@@ -223,53 +155,27 @@
         margin-top: calc(-25% + 0.1rem);
     }
 
-    .profile{
-        width: 13rem;
-        margin-right: calc(-9rem);
-    }
-    .dropdownAvatar{
-        margin-top:calc(0.5rem);
-        margin-right: calc(8rem);
-        position: absolute;
-    }
-    .right-section .nav .dark-mode{
-        margin-left: calc(-1rem);
-    }
-     .Notification{
-        left: calc(17.5rem);
-        margin-top: calc(2.5rem);
-    }
-    .contentNotif{
-        position:absolute;
-        margin-top: calc(4rem);
-        margin-right: calc(-13.5rem);
-        width: auto;  
-        height: 18.5rem; 
-    }
-    .image_{
-        margin-top: calc(1rem);
-    }
 }
 
 @media screen  and (max-width:680px){
-    .right-section .nav .dark-mode{
-        margin-left: calc(-3.5rem);
+
+    .profile .info{
+        display: none;
     }
-     .Notification{
-        left: calc(18.5rem);
-        margin-top: calc(2.5rem);
+
+    .nav{
+        padding-left: 15rem;
+        gap: 1rem;      
     }
-    .contentNotif{
-        position:absolute;
-        margin-top: calc(4rem);
-        margin-right: calc(-13.5rem);
-        width: auto;  
-        height: 18.5rem;
-    }
-    .image_{
-        margin-top: calc(1rem);
-    }
+         
+}
     
+
+@media screen  and (max-width:480px){
+    .nav{
+        padding-left: 10rem;
+        gap: 1rem;      
+    }   
 }
 
 

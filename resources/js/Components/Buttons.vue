@@ -72,9 +72,15 @@ const colorButtonClass = computed(() => {
     }[props.colorButton];
 });
 
-// Método para generar la URL de la ruta basado en el nombre de la ruta
-const generateRouteUrl = (routeName) => {
-    return route(routeName);
+// Method to generate route URL based on route name
+const generateRouteUrl = (routeName, defaultRoute = '#') => {
+    // Verificar si la ruta existe
+    if (window.route && window.route().has(routeName)) {
+        return route(routeName);
+    } else {
+        // Devolver la ruta predeterminada si la ruta no existe
+        return defaultRoute;
+    }
 };
 
 </script>
@@ -95,7 +101,7 @@ const generateRouteUrl = (routeName) => {
             py-2.5 
             text-center 
             me-2 
-            mb-2 
+            mb-2     
             " 
         :href="generateRouteUrl(href)" 
         :class="colorButtonClass,maxWidthButtonClass"

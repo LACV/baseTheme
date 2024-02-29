@@ -1,32 +1,27 @@
-.right-section{
-    margin-top: 1.4rem;
-    margin-bottom:10rem;
-    z-index: 0;
-}
-
-.right-section .nav{
+.nav{ 
+    width: 45%;
+    height: 4.5rem;
+    top: 0;
+    right: 1.5rem;
+    padding-top: 0.8rem;
+    position: absolute; 
     display: flex;
-    justify-content: end;
-    gap: 2rem;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: 0.1rem;
+    z-index: 2;    
 }
 
-.right-section .nav button{
-    display: none;
-}
-
-.right-section .dark-mode{
+.dark-mode{
     background-color: var(--color-light);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 1.6rem;
     width: 4.2rem;
     cursor: pointer;
     border-radius: var(--border-radius-1);
-    margin-left: -8rem;
 }
 
-.right-section .dark-mode span{
+.dark-mode span{
     font-size: 1.2rem;
     width: 50%;
     height: 100%;
@@ -35,20 +30,32 @@
     justify-content: center;
 }
 
-.right-section .dark-mode span.active{
+.dark-mode span.active{
     background-color: var(--color-primary);
     color: white;
     border-radius: var(--border-radius-1);
 }
 
- .profile{
-    display: flex;
-    gap: 2rem;
-    text-align: right;
+.dark-mode{
+    margin-left: calc(1rem);
 }
- 
 
- .profile .profile-photo{
+.menu-btn{
+    display: none;
+}
+
+.submenu-items{
+    margin-top: calc(-25% + 0.1rem);
+}
+
+.profile{
+    display: flex;
+    gap: 0.4rem;
+    text-align: right;
+    width: 13rem;
+}
+
+.profile-photo{
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
@@ -56,35 +63,14 @@
     cursor: pointer;
 }
 
-.right-section .reminders{
-    margin-top: 2rem;
-
-}
-
-
-.icoNoti{
+.containerNoti{   
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 0.8rem;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
-.icoNoti span{
-    padding: 10px;
-    box-shadow: var(--box-shadow);
-    background-color: var(--color-white);
-    border-radius: 50%;
-    color: var(--color-primary);
-    cursor: pointer;
-}
-
-.containerNoti{
-    margin-top: 12%;
-}
-
-
-.containerNoti .notification{
-    border: 2px dashed var(--color-primary);
+.notification{
+    border: 0.2rem dashed var(--color-primary);
     background-color: var(--color-white);
     display: flex;
     align-items: center;
@@ -94,38 +80,36 @@
     box-shadow: var(--box-shadow);
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 92%;
     margin-left: 1rem;
     
 }
 
-.containerNoti .notification:hover{
+.notification:hover{
     box-shadow: none;
 }
 
-.containerNoti .notification .content{
+.content{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0;
     width: 100%;
-}   
+} 
 
-
-.containerNoti .notification .icon{
+.icon{
     padding: 0.6rem;
     color: var(--color-white);
     background-color: var(--color-success);
-    border-radius: 20%;
+    border-radius: 40%;
     display: flex;
-    margin-left: -1rem;
+
 }
 
-.containerNoti .notification.deactive .icon{
+.notification.deactive .icon{
     background-color: var(--color-danger);
 }
 
-.containerNoti .add-reminder{
+.add-reminder{
     background-color: var(--color-white);
     border: 2px dashed var(--color-primary);
     color: var(--color-primary);
@@ -135,14 +119,13 @@
     cursor: pointer;
 }
 
-.containerNoti .add-reminder:hover{
+.add-reminder:hover{
     background-color: var(--color-primary);
     color: white;
 }
 
-.containerNoti .add-reminder div{
+.add-reminder div{
     display: flex;
     align-items: center;
     gap: 0.6rem;
 }
-

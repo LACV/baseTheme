@@ -1,7 +1,6 @@
 <script setup>
 
 import AppLayout from '@/Layouts/AppLayout.vue';
-import Welcome from '@/Components/Welcome.vue';
 import PopUp from '@/Components/PopUp.vue'
 import Buttons from '@/Components/Buttons.vue'
 import * as usePopUp from '@/usePopUp.js';
