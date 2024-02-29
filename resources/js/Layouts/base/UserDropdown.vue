@@ -24,18 +24,15 @@ const logout = () => {
       <small class="text-muted ">Admin</small>
   </div>
 
-        <div @mouseover="toggleDropdown(true)" @click="toggleDropdown()" id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" class="profile-photo">
+    <div @mouseover="toggleDropdown(true)" @click="toggleDropdown()" id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" class="profile-photo">
         	<span class="hidden material-icons-sharp">menu</span>
           <img src="assets/images/profile-1.jpg">
-        </div>
+    </div>
 
     <div v-if="isOpen"  id="dropdownAvatar"
-                        class="dropdownAvatar
-                              relative
-                              md:absolute
-                              top-20
-                              left-81
-                              right-5
+                        class="
+                              top-14
+                              absolute  
                               bg-white
                               divide-y
                               divide-primary
@@ -67,7 +64,7 @@ const logout = () => {
                 <h3 class="inline-block">Sign out</h3>
               </a>
           </div>
-      </div>
+    </div>
 </div>
 
 </template>

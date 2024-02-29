@@ -30,7 +30,8 @@ const EstadoClass = computed(()=>{
 </script>
 <template>
     <div class="containerNoti" v-if="$page.props.auth.user" :class="EstadoClass">
-        <div  @click="toggleNotification()" id="Notification" data-dropdown-toggle="Notification" class="Notification relative top-[-30px] cursor-pointer hover:text-primary dark:hover:text-primary dark:text-gray-500" >
+        <div  @click="toggleNotification()" id="Notification" data-dropdown-toggle="Notification" 
+        class="cursor-pointer hover:text-primary dark:hover:text-primary dark:text-gray-500" >
             <span class="Bubble material-icons-sharp" v-if="Estado">
             chat_bubble
             </span>
@@ -40,19 +41,16 @@ const EstadoClass = computed(()=>{
            
         </div>
         <div v-if="isOpen"  id="Notification" 
-                        class="contentNotif
-                              relative 
-                              md:absolute
-                              top-[9%]
-                              right-60
+                        class="
+                              top-10
+                              absolute                             
                               bg-white 
                               rounded-lg 
                               shadow 
-                              w-full
-                              h-[40%]
+                              m:w-full 
                               overflow-auto
-                              z-10 
-                              max-w-sm
+                              z-2 
+                              max-w-screen-sm
                               dark:bg-gray-200"
                               @mouseleave="toggleNotification(false)">
           <div class="block px-4 py-2  text-center cursor-pointer text-primary dark:text-primary">
@@ -60,11 +58,8 @@ const EstadoClass = computed(()=>{
           </div>
              <ContainerNotification EstadoNofication="true" />
              <ContainerNotification EstadoNofication="true" />
-             <ContainerNotification EstadoNofication="true" />
-             <ContainerNotification EstadoNofication="true" />
-            
-             
-            
+             <ContainerNotification EstadoNofication="false" />
+             <ContainerNotification EstadoNofication="true" />          
             <a href="#" class="block px-4 py-2  text-center  text-gray-600  hover:text-primary dark:hover:text-primary dark:text-gray-500">
             <div class="inline-flex items-center ">
             <span class="material-icons-sharp text-lg mr-1">
@@ -77,40 +72,4 @@ const EstadoClass = computed(()=>{
 
     </div>
   </div>
-
-
-<!-- <div class="containerNoti" v-if="$page.props.auth.user">
-
-
-    <div class="notification deactive">
-        
-        <div class="icon">
-            <span class="material-icons-sharp">
-                volume_up
-            </span>
-        </div>
-        <div class="content">
-            <div class="info">
-                <h3>Workshop</h3>
-                <small class="text_muted">
-                    08:00 AM - 12:00 PM
-                </small>
-            </div>
-            <span class="material-icons-sharp">
-                more_vert
-            </span>
-        </div>
-    </div>
-
-               
-    <div class="notification add-reminder">
-        <div>
-            <span class="material-icons-sharp">
-                add
-            </span>
-            <h3>Add Reminder</h3>
-        </div>
-    </div> 
-    
-</div>           -->
 </template>
