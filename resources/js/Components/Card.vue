@@ -8,6 +8,7 @@
                     mr-10
                     px-6 
                     py-4 
+                    mb-20
                     content-around 
                     shadow-md 
                     overflow-hidden 

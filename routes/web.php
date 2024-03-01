@@ -30,5 +30,21 @@ Route::middleware([
     Route::get('/profile',function(){
         return Inertia::render('Profile/Show');
     })->name('profile');
+    
+    Route::get('/historia',function(){
+        return Inertia::render('Historia');
+    })->name('historia');
+
+    Route::get('/normalbuttons',function(){
+        return Inertia::render('NormalButtons');
+    })->name('normalbuttons');
+
+    Route::get('/glowbuttons',function(){
+        return Inertia::render('GlowButtons');
+    })->name('glowbuttons');
+
+    Route::get('/buttons',function(){
+        return Inertia::render('ButtonsPopup');
+    })->name('buttons');
 });
 
