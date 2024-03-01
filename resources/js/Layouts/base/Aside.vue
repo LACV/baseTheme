@@ -46,47 +46,33 @@
                             <h3>Tablas</h3>
                         </Link>
                     
-                        <a href="#">
+                        <Link :href="route('historia')" :class="{ 'active': isRouteActive('historia') }">
                             <span class="material-icons-sharp">
                                 receipt_long
                             </span>
                             <h3>History</h3>
-                        </a>
+                        </Link>
                         
-                    <div class="submenu">
-                        <a>
-                                    <span class="material-icons-sharp">
-                                        insights
-                                    </span>
-                                    <h3>Menu</h3> 
-                            <div class="submenu-items">   
-                                    <a class="item">
-                                        <span class="material-icons-sharp">
-                                            featured_play_list
-                                        </span>
-                                        <h3>Category 1</h3> 
-                                    </a>
-                                    <a class="item">
-                                        <span class="material-icons-sharp">
-                                                   featured_play_list
-                                        </span>
-                                        <h3>Category 2</h3> 
-                                    </a>
-                                    <a class="item">
-                                        <span class="material-icons-sharp">
-                                                   featured_play_list
-                                        </span>
-                                        <h3>Category 3</h3> 
-                                    </a>
-                                    <a class="item">
-                                        <span class="material-icons-sharp">
-                                            featured_play_list
-                                        </span>
-                                        <h3>Category 4</h3> 
-                                    </a>   
+                        <div class="submenu">
+                            <a href="#">
+                                <span class="material-icons-sharp">insights</span>
+                                <h3>Buttons</h3>
+                            </a>
+                            <div class="submenu-items">
+                                <Link :href="route('normalbuttons')" :class="{ 'active': isRouteActive('normalbuttons') }" class="item">
+                                    <span class="material-icons-sharp">featured_play_list</span>
+                                    <h3>Category 1</h3>
+                                </Link>
+                                <Link :href="route('glowbuttons')" :class="{ 'active': isRouteActive('glowbuttons') }" class="item">
+                                    <span class="material-icons-sharp">featured_play_list</span>
+                                    <h3>Category 2</h3>
+                                </Link>
+                                <Link :href="route('buttons')" :class="{ 'active': isRouteActive('buttons') }" class="item">
+                                    <span class="material-icons-sharp">featured_play_list</span>
+                                    <h3>Category 3</h3>
+                                </Link>
                             </div>
-                        </a>
-                    </div>
+                        </div>
                     
                         <a href="#">
                             <span class="material-icons-sharp">
