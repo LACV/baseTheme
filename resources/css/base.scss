@@ -70,7 +70,6 @@
     --color-gray-900-dark: #F9FAFB;
 }
 
-
 *{
     margin: 0;
     padding: 0;
@@ -81,26 +80,37 @@
     box-sizing: border-box;
 }
 
+
 /*librerias de tailwind*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 html{
-    font-size: 14px;
+    font-size: 13px;
 }
 
 
-body{
-    width: 100vw;
+body{  
+    width: 100%;
     height: 100vh;
+    padding: 0.2rem 2rem 0.2rem 0.5rem;
     font-family: 'Poppins', sans-serif;
     font-size: 0.88rem;
     user-select: none;
     overflow-x: hidden;
     color: var(--color-dark);
     background-color: var(--color-background);
+}
+
+.container-app{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 14% 85%; 
+    justify-items: center;  
+    padding: 0rem ;
+    margin-left: 1rem;
+    gap: 0.1rem;    
 }
 
 a{
@@ -161,13 +171,6 @@ b{
     color: var(--color-warning);
 }
 
-.container{
-    display: grid;
-    width: 95%;
-    margin: 0 auto;
-    gap: 1.8rem;
-    grid-template-columns: 12rem auto 23rem;
-}
 
 .content span{
     color: var(--color-primary);

@@ -6,14 +6,13 @@ aside .toggle{
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    margin-top: 1.4rem;
-    
+    margin-top: 1rem;   
 }
 
 .logo{
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.3rem;
 }
 
 .logo img{
@@ -38,7 +37,7 @@ aside .sidebar{
     border-radius: 15px;
     height: calc(100% + 2rem);
     position: relative;
-    top: 1.5rem;
+    top: 0.3rem;
     transition: all 0.3s ease;
 }
 

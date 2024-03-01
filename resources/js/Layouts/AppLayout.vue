@@ -27,7 +27,7 @@ const logout = () => {
 
 <template>
 	
-	<div class="container">
+	<div class="container-app">
         <!-- Header Section -->
         <Header/>
         <!-- Sidebar Section -->
@@ -45,9 +45,6 @@ const logout = () => {
             <!-- End of Recent Orders -->      
         </main>
         <!-- End of Main Content -->
-
-
-
         <div class="footer">
             <p>Copyright © <a href="#" target="_blank">{{ appName || 'baseTheme' }}</a> 2024</p>
         </div>
