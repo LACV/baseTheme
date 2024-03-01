@@ -96,12 +96,12 @@ const generateRouteUrl = (routeName, defaultRoute = '#') => {
             focus:outline-none  
             font-bold 
             rounded-lg 
-            text-sm 
+            text-sm          
             px-5 
             py-2.5 
             text-center 
             me-2 
-            mb-2     
+            mb-0.5     
             " 
         :href="generateRouteUrl(href)" 
         :class="colorButtonClass,maxWidthButtonClass"
@@ -126,7 +126,7 @@ const generateRouteUrl = (routeName, defaultRoute = '#') => {
         py-2.5 
         text-center 
         me-2 
-        mb-2 
+        mb-0.5 
         " 
         :class="colorButtonClass,maxWidthButtonClass"       
     >

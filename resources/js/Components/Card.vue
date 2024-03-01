@@ -6,6 +6,7 @@
                     dark:bg-gray-100  
                     mt-6 
                     mr-10
+                    mb-10
                     px-6 
                     py-4 
                     content-around 

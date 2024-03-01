@@ -1,19 +1,11 @@
-.container{
-    //grid-template-columns: calc(14vw) calc(58vw) calc(20vw);
-    grid-template-columns: calc(14vw) calc(78vw);
-    justify-items: center;
-    margin-left: calc(1vw);
-    margin-right: calc(1vw);
-}
-
 main{
-    width: 95%;
-    margin-top: 5rem;
+    width: 98%;
+    margin-top: 3rem;
     margin-bottom: 1rem;
 }
 
 main .containerMain{
-    margin-top: 1.3rem;
+    margin-top: 1rem;
     max-height: calc(100% + 1rem); 
 
 }
