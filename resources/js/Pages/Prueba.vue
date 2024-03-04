@@ -76,7 +76,7 @@
                             </td>
                             <td scope="row" 
                                 class="flex flex-col md:flex-row truncate px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                <img class="w-10 h-10 rounded-full mx-auto" src="assets/images/profile-1.jpg" alt="Jese image">
+                                <img class="w-10 h-10 rounded-full mb:mx-auto" src="assets/images/profile-1.jpg" alt="Jese image">
                                 <div class="flex flex-col ps-3 truncate">
                                     <div class="text-base font-semibold truncate">Neil Sims</div>
                                     <div class="text-gray-500 truncate ">neil.sims@flowbite.com</div>
@@ -105,7 +105,7 @@
                             </td>
                             <th scope="row" 
                                 class="flex flex-col md:flex-row truncate px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                <img class="w-10 h-10 rounded-full mx-auto" src="assets/images/profile-2.jpg" alt="Jese image">
+                                <img class="w-10 h-10 rounded-full mb:mx-auto" src="assets/images/profile-2.jpg" alt="Jese image">
                                 <div class="flex flex-col ps-3 truncate">
                                     <div class="text-base font-semibold truncate">Bonnie Green</div>
                                     <div class="text-gray-500 truncate">
@@ -136,7 +136,7 @@
                             </td>
                             <th scope="row" 
                                 class="flex flex-col md:flex-row truncate px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                <img class="w-10 h-10 rounded-full mx-auto" src="assets/images/profile-3.jpg" alt="Jese image">
+                                <img class="w-10 h-10 rounded-full mb:mx-auto" src="assets/images/profile-3.jpg" alt="Jese image">
                                 <div class="flex flex-col ps-3 truncate">
                                     <div class="text-base font-semibold truncate">Jese Leos</div>
                                     <div class="text-gray-500 truncate">jese@flowbite.com</div>
@@ -156,63 +156,7 @@
                                     <Buttons color-button="e" link maxWidthButton>Delete</Buttons>
                                 </div>
                             </td>
-                        </tr>
-                        <tr class="bg-white text-gray-700 border-b dark:bg-gray-200 dark:border-gray-300 hover:bg-gray-300 dark:hover:bg-gray-400 hover:cursor-pointer">
-                            <td class="w-4 p-4">
-                                <div class="flex items-center">
-                                    
-                                </div>
-                            </td>
-                            <th scope="row" class="flex flex-col md:flex-row truncate px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                <img class="w-10 h-10 rounded-full mx-auto" src="assets/images/profile-1.jpg" alt="Jese image">
-                                <div class="flex flex-col ps-3 truncate">
-                                    <div class="text-base font-semibold truncate">Thomas Lean</div>
-                                    <div class="font-normal text-gray-500 truncate">thomes@flowbite.com</div>
-                                </div>
-                            </th>
-                            <td class="px-6 py-4">
-                                UI/UX Engineer
-                            </td>
-                            <td class="px-6 py-4">
-                                <div class="flex items-center">
-                                    <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> Online
-                                </div>
-                            </td>
-                            <td class="px-1 py-0.5 truncate">
-                                <div class="w-auto flex flex-col md:flex-row items-center md:gap-1.5 gap-0">
-                                    <Buttons color-button="i" link maxWidthButton>Edit</Buttons>
-                                    <Buttons color-button="e" link maxWidthButton>Delete</Buttons>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="bg-white text-gray-700 border-b dark:bg-gray-200 dark:border-gray-300 hover:bg-gray-300 dark:hover:bg-gray-400 hover:cursor-pointer">
-                            <td class="w-4 p-4">
-                                <div class="flex items-center">
-                                    
-                                </div>
-                            </td>
-                            <th scope="row" class="flex flex-col md:flex-row truncate px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                <img class="w-10 h-10 rounded-full mx-auto" src="assets/images/profile-2.jpg" alt="Jese image">
-                                <div class="flex flex-col ps-3 truncate">
-                                    <div class="text-base font-semibold truncate">Leslie Livingston</div>
-                                    <div class="font-normal text-gray-500 truncate">leslie@flowbite.com</div>
-                                </div>
-                            </th>
-                            <td class="px-6 py-4">
-                                SEO Specialist
-                            </td>
-                            <td class="px-6 py-4">
-                                <div class="flex items-center">
-                                    <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div> Offline
-                                </div>
-                            </td>
-                            <td class="px-1 py-0.5 truncate">
-                                <div class="w-auto flex flex-col md:flex-row items-center md:gap-1.5 gap-0">
-                                    <Buttons color-button="i" link maxWidthButton>Edit</Buttons>
-                                    <Buttons color-button="e" link maxWidthButton>Delete</Buttons>
-                                </div>
-                            </td>
-                        </tr>
+                        </tr>   
                     </tbody>
                 </table>
 
