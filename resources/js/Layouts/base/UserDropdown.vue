@@ -34,7 +34,7 @@ const logout = () => {
                               top-14
                               absolute  
                               bg-white
-                              divide-y
+                              divide-y 
                               divide-primary
                               rounded-lg
                               shadow
