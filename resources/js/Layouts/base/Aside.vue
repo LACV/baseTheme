@@ -39,13 +39,20 @@
                             <h3>Dashboard</h3>
                         </Link>
 
-                        <Link :href="route('tables')" :class="{ 'active': isRouteActive('tables') }">
+                        <Link :href="route('department.index')" :class="{ 'active': isRouteActive('department.index') }">
                             <span class="material-icons-sharp">
                                 person_outline
                             </span>
-                            <h3>Tablas</h3>
+                            <h3>Departments</h3>
                         </Link>
-                    
+
+                        <Link :href="route('employee.index')" :class="{ 'active': isRouteActive('employee.index') }">
+                            <span class="material-icons-sharp">
+                                person_outline
+                            </span>
+                            <h3>Employees</h3>
+                        </Link>
+                
                         <Link :href="route('historia')" :class="{ 'active': isRouteActive('historia') }">
                             <span class="material-icons-sharp">
                                 receipt_long
