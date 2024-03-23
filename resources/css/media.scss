@@ -1,5 +1,7 @@
 @media screen and (max-width: 1360px){
-
+    .currentlist {
+        margin-left: calc(4rem);
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -26,6 +28,46 @@
         position: relative;
         margin-top: 1.8rem;
     }  
+    
+    .currentlist {
+        margin-left: calc(4rem);
+    }
+    /*Current order*/
+    .currentlist {
+        margin-left: calc(2rem);
+        width: 32rem;
+    }
+    .numlist{
+        margin-top: calc(-1rem);
+        margin-right: calc(1rem);
+    }
+    .title{
+        font-size: calc(2rem);
+    }
+    .boton{
+        margin-left: calc(7rem);
+    }
+    .contect2 span{
+     font-size: calc(0.975rem);
+    }
+    .Nombr{
+        font-size: calc(0.875rem);
+    }
+    .caj{
+        margin-top: calc(0.2rem);
+        width: calc(2rem);
+        height: calc(2rem);
+    }
+    .ico{
+        margin-top: calc(-0.3rem);
+        padding-left: calc(0.5rem);
+    }
+    
+    /*clasificacio de lista */
+    .ClasList{
+        margin-left: calc(6rem);
+    }
+    
 }
 
 @media screen  and (max-width:1000px){
@@ -37,6 +79,32 @@
     }
     aside{
         width: 5.8rem;  
+    }
+     /*Current order*/
+    .currentlist {
+        margin-left: calc(-2rem);
+    }
+    .title{
+        font-size: calc(1.5rem);
+        margin-left: calc(1rem);
+    }
+    .boton{
+        margin-left: calc(5.5rem);
+    }
+   
+    .contect2 span{
+        font-size: calc(0.775rem);
+       }
+    .Nombr{
+        font-size: calc(0.775rem);
+    }
+    .img_prd{
+        width: 2rem;
+        height: 2rem;
+    }
+     /*clasificacio de lista */
+     .ClasList{
+        margin-left: calc(2rem);
     }
     
 }
@@ -138,7 +206,7 @@
     .submenu-items{
         margin-top: calc(-25% + 0.1rem);
     }
-
+   
 }
 
 @media screen  and (max-width:680px){
@@ -150,18 +218,68 @@
     .nav{
         padding-left: 15rem;
         gap: 1rem;      
+    }  
+    
+    /*Current Order*/
+    .currentlist {
+        margin-left: calc(-3.5rem);
+        margin-right: -1rem;
     }
-         
+  
+    .title{
+        font-size: calc(1.4rem);
+    }
+    .boton{
+        margin-left: calc(5rem);
+    }
+    .contect2{
+        margin-left: -4rem;
+    }
+    /*clasificacio de lista*/
+    .ClasList{
+        margin-left: calc(0.5rem);
+    }
+   
 }
     
 
-@media screen  and (max-width:480px){
+@media screen  and (max-width:639px){
     .nav{
         padding-left: 10rem;
         gap: 1rem;      
-    }   
+    } 
+     /*Current Order*/
+     .currentlist {
+        margin-left: calc(4rem);
+    } 
+    .Nombr{
+        margin-left: 0.6rem;
+        font-size: calc(0.975rem);
+    }
+    .contect2 span{
+        font-size: calc(0.975rem);
+       }
+    .punt1{
+        order: 2;
+     }
+     .punt2{
+      order: 1;
+     } 
+     /*clasificacio de lista*/
+    .ClasList{
+        margin-left: calc(1.8rem);
+    }
 }
-
+@media screen  and (max-width:560px){
+    /*Current Order*/
+    .currentlist {
+        margin-left: calc(2rem);
+    } 
+    /*clasificacio de lista*/
+    .ClasList{
+        margin-left: calc(8rem);
+    }
+}
 
 
   

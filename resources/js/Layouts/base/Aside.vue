@@ -97,12 +97,12 @@
                             <span class="message-count">27</span>
                         </a>
 
-                        <a href="#">
+                        <Link :href="route('saleList')" :class="{ 'active': isRouteActive('saleList') }">
                             <span class="material-icons-sharp">
                                 inventory
                             </span>
                             <h3>Sale List</h3>
-                        </a>
+                        </Link>
                         <a href="#">
                             <span class="material-icons-sharp">
                                 report_gmailerrorred
