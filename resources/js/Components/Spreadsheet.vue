@@ -20,22 +20,27 @@ const props = defineProps({
         type: String,
         default: '-',
     },
-    colorContent: {
+    colcont: {
         type: String,
-        default: 'primaru',
+        default: 'cont-pr',
     },
-
 });
 
-const colorcont = computed (() => {
-    return {
-        'subcontent_pu':'subcontent subcontent_pu bg-purple',
-    }[props.colorContent]
-
-});
+const colorscont = computed(()=>{
+    return{
+        'cont-pr':'subcontent sub_cont-pr bg-primary',
+        'cont-s':'subcontent sub_cont-s bg-secondary',
+        'cont-su':'subcontent sub_cont-su bg-success',
+        'cont-i':'subcontent sub_cont-i bg-info',
+        'cont-w':'subcontent sub_cont-w bg-warning',
+        'cont-e':'subcontent sub_cont-e bg-error',
+        'cont-g':'subcontent sub_cont-g bg-gray',
+        'cont-p':'subcontent sub_cont-p bg-purple',
+    }[props.colcont];
+})
 </script>
 <template>
-    <div :type="colorContent" class="contn" :class="colorcont">
+    <div :type="colcont" class="contn" :class="colorscont">
         <div class="subcontent">
             <div class="layer">
                 <h3 class="h3">{{ title }}</h3>
