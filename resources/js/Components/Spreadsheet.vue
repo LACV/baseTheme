@@ -28,14 +28,14 @@ const props = defineProps({
 
 const colorscont = computed(()=>{
     return{
-        'cont-pr':'subcontent sub_cont-pr bg-primary',
-        'cont-s':'subcontent sub_cont-s bg-secondary',
-        'cont-su':'subcontent sub_cont-su bg-success',
-        'cont-i':'subcontent sub_cont-i bg-info',
-        'cont-w':'subcontent sub_cont-w bg-warning',
-        'cont-e':'subcontent sub_cont-e bg-error',
-        'cont-g':'subcontent sub_cont-g bg-gray',
-        'cont-p':'subcontent sub_cont-p bg-purple',
+        'cont-pri':'contn cont-pr',
+        'cont-s':'contn sub_cont-s ',
+        'cont-su':'contn sub_cont-su ',
+        'cont-i':'contn sub_cont-i ',
+        'cont-w':'contn sub_cont-w ',
+        'cont-e':'contn sub_cont-e ',
+        'cont-g':'contn sub_cont-g ',
+        'cont-p':'contn sub_cont-p ',
     }[props.colcont];
 })
 </script>
