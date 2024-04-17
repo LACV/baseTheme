@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 
 
-const props = defineProps({
+const Props = defineProps({
 
     title: {
         type: String,
@@ -20,35 +20,37 @@ const props = defineProps({
         type: String,
         default: '-',
     },
-    colcont: {
+    colorcontent: {
         type: String,
-        default: 'cont-pr',
+        default: 'pr'
     },
+
 });
 
-const colorscont = computed(()=>{
-    return{
-        'cont-pri':'contn cont-pr',
-        'cont-s':'contn sub_cont-s ',
-        'cont-su':'contn sub_cont-su ',
-        'cont-i':'contn sub_cont-i ',
-        'cont-w':'contn sub_cont-w ',
-        'cont-e':'contn sub_cont-e ',
-        'cont-g':'contn sub_cont-g ',
-        'cont-p':'contn sub_cont-p ',
-    }[props.colcont];
-})
+const colorcontentClass = computed(() => {
+    return {
+        'pr':'contn contn_pr',
+        'se':'contn contn_se',
+        'su':'contn contn_su',
+        'i':'contn contn_i',
+        'w':'contn contn_w',
+        'e':'contn contn_e',
+        'g':'contn contn_g',
+        'p':'contn contn_p',
+    }[Props.colorcontent];
+});
 </script>
 <template>
-    <div :type="colcont" class="contn" :class="colorscont">
-        <div class="subcontent">
-            <div class="layer">
-                <h3 class="h3">{{ title }}</h3>
-                <p class="p"> <slot /> </p>
-                <span class="Span"><i class="material-icons-sharp">{{ Icon }}</i></span>
+        <div  
+        class="contn" 
+        :class=" colorcontentClass">
+            <div class="subcontent ">
+                <div class="layer">
+                    <h3 class="h3">{{ title }}</h3>
+                    <p class="p"> <slot /> </p>
+                    <span class="Span"><i class="material-icons-sharp">{{ Icon }}</i></span>
+                </div>
+                <h4 class="h4">{{ footer }}</h4>
             </div>
-            <h4 class="h4">{{ footer }}</h4>
         </div>
-
-    </div>
 </template>
