@@ -6,10 +6,12 @@ margin: 0;
 }
 .contn {
     display: flex;
+    flex-wrap: wrap;
     gap: 50px;
-    margin-top: 4%;
+    margin-top: 1%;
     align-items: center;
-    line-height: 2em;
+    line-height: 1.8em;
+    justify-content: center;
 }
 .contn_pr{
     --color: var(--color-primary);
@@ -116,5 +118,5 @@ margin: 0;
     filter: drop-shadow(5px 0 4px #0000001a);
 }
 .subcontent:hover .layer{
-    left: 50px;
+    left: 40px;
 }
