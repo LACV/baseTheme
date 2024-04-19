@@ -129,6 +129,40 @@ Before getting started, ensure you have the following installed:
     </Buttons>
 This code will allow us to open the popup,
 ```
+## Information cards
+1. Import of the `InformationCards` Component:
+We use the `<script setup>` directive to import the `InformationCards` component from the path `@/components/Spreadsheet.vue`.
+
+2. Use of the `InformationCards` Component:
+Inside the `<template>` block, we invoke the `<InformationCards>` component and configure its corresponding properties:
+```bash
+   <InformationCards
+      title="title"
+      footer="top 1"
+      Icon="menu"
+      colorcontent="pr">
+      Here you can put relevant information!
+   </InformationCards>
+```
+3. Explanation of the properties of the `<Information Cards>` components:
+```bash
+   "title:" Allows you to add a title to the sheet.
+   "Footer:" Allows you to add a title, number, or description at the bottom of the sheet.
+   "icon:" Allows you to specify the name of the icon you want to use (only works with Google Fonts icons).
+   "colorcontent: pr" Allows you to modify the color of the sheet.
+```
+4.  Types of Colors for the Sheets:
+Different values can be used for the `colorcontent` property:
+```bash
+   "pr" color primary
+   "se" color secondary
+   "i" color info
+   "g" color gray
+   "su" color success
+   "e" color danger
+   "w" color warning
+   "p" color purple
+```
 
 ## Contributing
 
