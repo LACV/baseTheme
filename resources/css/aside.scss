@@ -38,7 +38,7 @@ aside .sidebar{
     height: calc(100% + 2rem);
     position: relative;
     top: 0.3rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease
 }
 
 aside .sidebar:focus{
@@ -73,6 +73,7 @@ aside .sidebar a.active{
     color: var(--color-primary);
     background-color: var(--color-light);
     margin-left: 0;
+    margin-top: 0.5rem;
 }
 
 aside .sidebar a.active::before{
@@ -111,35 +112,6 @@ aside .sidebar .message-count{
 }
 
 // /*submenu*/
-
-// .submenu:hover{
-//     cursor: pointer;
-// }
-
-// .item:not(.active):hover { 
-//     cursor: pointer;
-// }
-
-// .submenu-items{
-//     display: none;
-//     //position: relative!important;
-
-//     left: calc(30% + 0.1rem);
-//     margin-top: calc(-35% + 0.1rem);
-//     background: var(--color-white);
-//     border-radius: var(--border-radius-2);
-//     transition: all 0.5s ease;
-// }
-
-// .submenu:hover .submenu-items{
-//     display: block;
-// }
-
-// .item{   
-//     width: 100%;
-//     height: max-content;
-//     padding: 1rem;
-// }
 
 .submenu:hover{
     cursor: pointer;
