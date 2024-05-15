@@ -13,11 +13,13 @@ class EmployeeeController extends Controller
     {
         $employees = Employee::select('employees.id','employees.name','email','phone','department_id','departments.name as departments')
         ->join('departments','departments.id','=','employees.department_id')
+        ->orderBy('employees.id','asc')
         ->paginate(10);
 
-        $departments = Department::all();
-
-        return Inertia::render('Employee',['employees' => $employees,'department' => $departments]);
+        //dd($employees);
+        //$departments = Department::all();
+        //return Inertia::render('Employee/Employee',['employees' => $employees,'departments' => $departments]);
+        return Inertia::render('Employee/Employee',['employees' => $employees]);
     }
 
     public function create()
