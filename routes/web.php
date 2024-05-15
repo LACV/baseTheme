@@ -48,5 +48,9 @@ Route::middleware([
     Route::get('/buttons',function(){
         return Inertia::render('ButtonsPopup');
     })->name('buttons');
+
+    Route::get('/saleList',function(){
+        return Inertia::render('SaleList');
+    })->name('saleList');
 });
 

@@ -3,11 +3,26 @@
     import * as asideMenu from '@/useAsideSetup.js'; 
     import { Head, Link, router } from '@inertiajs/vue3';
     import LogoApp from '@/Components/LogoApp.vue';
-    
 
-    const isRouteActive = (routeName) =>{
+    const mainItem = ref(null);
+    const submenuItems = ref(null);
+    const isActive = ref(false);
+    const isOpen= ref(false);
+
+    onMounted(() => {
+        const storedActiveState = localStorage.getItem('isActive');
+        isActive.value = storedActiveState === 'true';
+    });
+
+    const toggleActive = () => {
+        isActive.value = !isActive.value;
+        localStorage.setItem('isActive', isActive.value.toString());
+    };
+
+
+    const isRouteActive = (routeName) => {
         return route().current(routeName);
-    }
+    };
 
     const logout = () => {
         router.post(route('logout'));
@@ -60,27 +75,27 @@
                             <h3>History</h3>
                         </Link>
                         
-                        <div class="submenu">
-                            <a href="#">
+                        <div class="submenu" >
+                            <a href="#" ref="mainItem"  :class="{'active': isActive }" @mouseover="toggleActive">
                                 <span class="material-icons-sharp">insights</span>
                                 <h3>Buttons</h3>
                             </a>
-                            <div class="submenu-items">
+                            <div class="submenu-items" ref="submenuItems">
                                 <Link :href="route('normalbuttons')" :class="{ 'active': isRouteActive('normalbuttons') }" class="item">
                                     <span class="material-icons-sharp">featured_play_list</span>
-                                    <h3>Category 1</h3>
+                                    <h3>Normal Buttons</h3>
                                 </Link>
                                 <Link :href="route('glowbuttons')" :class="{ 'active': isRouteActive('glowbuttons') }" class="item">
                                     <span class="material-icons-sharp">featured_play_list</span>
-                                    <h3>Category 2</h3>
+                                    <h3>Glow Buttons</h3>
                                 </Link>
                                 <Link :href="route('buttons')" :class="{ 'active': isRouteActive('buttons') }" class="item">
                                     <span class="material-icons-sharp">featured_play_list</span>
-                                    <h3>Category 3</h3>
+                                    <h3>Popup Buttons</h3>
                                 </Link>
-                            </div>
+                            </div >
                         </div>
-                    
+
                         <a href="#">
                             <span class="material-icons-sharp">
                                 mail_outline
@@ -89,12 +104,12 @@
                             <span class="message-count">27</span>
                         </a>
 
-                        <a href="#">
+                        <Link :href="route('saleList')" :class="{ 'active': isRouteActive('saleList') }">
                             <span class="material-icons-sharp">
                                 inventory
                             </span>
                             <h3>Sale List</h3>
-                        </a>
+                        </Link>
                         <a href="#">
                             <span class="material-icons-sharp">
                                 report_gmailerrorred

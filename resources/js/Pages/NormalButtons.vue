@@ -2,6 +2,8 @@
     import { Head } from '@inertiajs/vue3';
     import AppLayout from '@/Layouts/AppLayout.vue';
     import Buttons from '@/Components/Buttons.vue';
+    import New from '@/Components/New.vue';
+    import DynamicMenu from '@/Components/DynamicMenu.vue';
 </script>
 
 <template>
@@ -76,5 +78,8 @@
       Button Purple 
     </Buttons>
 
+    <New/>
+
+    <DynamicMenu/>
     </AppLayout>
  </template> 
