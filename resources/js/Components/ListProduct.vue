@@ -34,13 +34,17 @@ title: {
     <div class="contect2 flex col-span-1 flex-wrap justify-end  ">
         <div class="flex pl-6">
             <div class="caj rounded-lg bg-gray-100 w-10 h-10 cursor-pointer">
-                <span class="ico material-icons-sharp text-2xl pt-1 pl-2">add</span>
+                <svg class="ml-1.5 mt-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M5 12h14"/>
+                </svg>
             </div>
 
             <span class="text-lg mt-[0.5rem] px-4">5</span>
 
             <div class="caj rounded-lg bg-gray-100 w-10 h-10 cursor-pointer">
-                <span class="ico material-icons-sharp text-2xl pt-1 pl-2 ">remove</span>
+                <svg class="ml-1.5 mt-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M5 12h14m-7 7V5"/>
+                </svg>
             </div>
         </div>
         <div class="pl-5">
@@ -59,13 +63,17 @@ title: {
     <div class="contect2 flex col-span-1 flex-wrap justify-end  ">
         <div class=" flex pl-6">
             <div class="caj rounded-lg bg-gray-100 w-10 h-10 cursor-pointer">
-                <span class="ico material-icons-sharp text-2xl pt-1 pl-2">add</span>
+                <svg class="ml-1.5 mt-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M5 12h14"/>
+                </svg>
             </div>
 
             <span class="text-lg mt-[0.5rem] px-4">5</span>
 
             <div class="caj rounded-lg bg-gray-100 w-10 h-10 cursor-pointer">
-                <span class="ico material-icons-sharp text-2xl pt-1 pl-2 ">remove</span>
+                <svg class="ml-1.5 mt-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M5 12h14m-7 7V5"/>
+                </svg>
             </div>
         </div>
         <div class=" pl-5">
