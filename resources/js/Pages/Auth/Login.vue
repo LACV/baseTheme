@@ -1,5 +1,4 @@
 <script setup>
-import Recaptcha from '@/Components/Recaptcha.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
 import Card from '@/Components/Card.vue';
 import appLayout from '@/Layouts/AppLayout.vue';
@@ -79,7 +78,7 @@ const submit = () => {
                     <span class="ms-2 text-sm font-bold  text-gray-900">Remember me</span>
                 </label>
             </div>
-            <Recaptcha />
+
             <div class="flex items-center mt-4">
                 <Buttons class="ms-4" colorButton="primary" maxWidthButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Log in
