@@ -35,7 +35,7 @@ aside .sidebar{
     background-color: var(--color-white);
     box-shadow: var(--box-shadow);
     border-radius: 15px;
-    height: calc(100% + 2rem);
+    height: calc(100% + 4rem);
     position: relative;
     top: 0.3rem;
     transition: all 0.3s ease
@@ -135,7 +135,7 @@ aside .sidebar .message-count{
 }
 
 .item{   
-    width: 100%;
+    width: 12rem;
     height: max-content;
     padding: 1rem;
 }
