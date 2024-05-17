@@ -1,42 +1,70 @@
 <script setup>
-    import { defineProps } from 'vue';
-    import { Head,usePage } from '@inertiajs/vue3';
+    // Import necessary functions and components
+    import { ref, defineProps, computed } from 'vue';
+    import { Head, usePage } from '@inertiajs/vue3';
     import AppLayout from '@/Layouts/AppLayout.vue';
-    import TextInput from '@/Components/TextInput.vue';
     import Buttons from '@/Components/Buttons.vue';
     import Pagination from '@/Components/Pagination.vue';
+    import SearchInput from '@/Components/SearchInput.vue';
 
+    // Define props received by the component
     const props = defineProps({
-        employees: { type: Object},
+        employees: { type: Object }, // Object containing employee data
     });
-    //console.log('Employees:', props.employees);
+
+    // Reference for the search query entered by the user
+    const searchQuery = ref('');
+
+    // Handler function for updating the search query
+    const handleSearch = (query) => {
+        searchQuery.value = query; // Update the search query with the input value
+    };
+
+    // Computed property to filter employees based on the search query
+    const filteredEmployees = computed(() => {
+        // If the search query is empty, return all employees
+        if (!searchQuery.value.trim()) {
+            return props.employees.data;
+        }
+
+        // Otherwise, filter employees based on the search query
+        const search = searchQuery.value.toLowerCase();
+        return props.employees.data.filter((e) => {
+            // Customize this logic based on your employee data structure
+            return (
+                e.name.toLowerCase().includes(search) || // Filter by name
+                e.email.toLowerCase().includes(search) || // Filter by email
+                e.phone.toLowerCase().includes(search) // Filter by phone
+            );
+        });
+    });
 </script>
 
 <template>
     <Head title="Tables"/>
- 
+
     <AppLayout>
         <div class="w-full px-0.5 py-0.5 my-5 mb-15 h-auto">
             <div class="flex items-center mt-4  justify-between flex-column md:flex-row flex-wrap space-y-4 md:space-y-0 py-4 rounded-2xl pr-1">
                 <div class="">
-                   
-                </div>     
+
+                </div>
                 <div class="relative">
                     <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
                         <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                         </svg>
                     </div>
-                    <TextInput :class="'pl-9'" :placeholder="'Search'"/>
                 </div>
+                <SearchInput @update="handleSearch" /> <!-- Listening for 'update' event -->
             </div>
-            
+
             <table class="w-full table-fixed  text-sm text-left rtl:text-right text-gray-500 dark:text-gray-300">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-100 dark:text-gray-600">
                         <tr>
                             <th scope="col" class="w-3 p-2">
                                 <div class="flex items-center">
-                                    <input id="checkbox" type="checkbox" 
+                                    <input id="checkbox" type="checkbox"
                                     class="w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-gray-200 dark:ring-offset-gray-200 dark:focus:ring-offset-gray-200 focus:ring-2 dark:bg-gray-300 dark:border-gray-400">
                                 </div>
                             </th>
@@ -77,14 +105,14 @@
                 </thead>
                 <tbody>
                     <tr
-                        class="bg-white text-gray-800 border-b dark:bg-gray-200 dark:border-gray-300 hover:bg-gray-300 dark:hover:bg-gray-400 hover:cursor-pointer"
-                        v-for="e in employees.data" :key="e.id"
-                    >
+                       class="bg-white text-gray-800 border-b dark:bg-gray-200 dark:border-gray-300 hover:bg-gray-300 dark:hover:bg-gray-400 hover:cursor-pointer"
+                       v-for="e in filteredEmployees" :key="e.id"
+                       >
                             <td class="w-4 p-4">
-                                <div class="flex items-center">    
+                                <div class="flex items-center">
                                 </div>
                             </td>
-                            <td scope="row" 
+                            <td scope="row"
                                 class="flex flex-col md:flex-row truncate px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                 <img class="w-10 h-10 rounded-full md:mx-0 mx-auto" alt="">
                                 <div class="flex flex-col ps-3 truncate">
@@ -97,7 +125,7 @@
                                     <div class="text-gray-500 truncate ">
                                         Phone: {{ e.phone }}
                                     </div>
-                                </div> 
+                                </div>
                             </td>
                             <td class="px-6 py-4">
                                 {{ e.departments }}
@@ -114,8 +142,8 @@
                                 <div class="w-full flex flex-col md:flex-row pr-1 md:gap-1.5 gap-0">
                                     <Buttons color-button="i" link maxWidthButton>Edit</Buttons>
                                     <Buttons color-button="e" link maxWidthButton>Delete</Buttons>
-                                </div>   
-                            </td>                           
+                                </div>
+                            </td>
                     </tr>
                 </tbody>
             </table>
@@ -125,5 +153,5 @@
         </div>
 
     </AppLayout>
-    
+
 </template>

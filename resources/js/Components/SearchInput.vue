@@ -18,5 +18,5 @@
 <script setup>
 import { ref } from 'vue';
 
-const query = ref('');
+const query = ref(''); //Initializing query variable with a reference
 </script>
