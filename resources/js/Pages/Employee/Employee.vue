@@ -93,6 +93,7 @@
 <template>
     <Head title="Tables"/>
  
+    
     <AppLayout>
         <div class="w-full px-0.5 py-0.5 my-5 mb-15 h-auto">
             <div class="flex items-center mt-4  justify-between flex-column md:flex-row flex-wrap space-y-4 md:space-y-0 py-4 rounded-2xl pr-1">
