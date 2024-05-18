@@ -1,15 +1,93 @@
 <script setup>
-    import { defineProps } from 'vue';
-    import { Head,usePage } from '@inertiajs/vue3';
+    import { nextTick,ref } from 'vue';
+    import { Head,useForm } from '@inertiajs/vue3';
     import AppLayout from '@/Layouts/AppLayout.vue';
+    import Modal from '@/Components/Modal.vue';
+    import Label from '@/Components/Label.vue';
     import TextInput from '@/Components/TextInput.vue';
+    import SelectInput from '@/Components/SelectInput.vue';
     import Buttons from '@/Components/Buttons.vue';
+    import ErrorMsj from '@/Components/ErrorMsj.vue';
     import Pagination from '@/Components/Pagination.vue';
+    import Swal from 'sweetalert2';
+
+
+
+    const nameInput = ref(null);
+    const modal = ref(false);
+    const title = ref('');
+    const operation = ref(1);
+    const id = ref('');
+    const moduleTitle='Employee';
 
     const props = defineProps({
-        employees: { type: Object},
+        employees: { type: Object },
+        departments: { type:Object },
     });
     //console.log('Employees:', props.employees);
+
+    const form = useForm({
+        name:'', email:'',phone:'',department_id:''
+    });
+
+    const openModal =(op,name,email,phone,department,employee)=>{
+        modal.value = true;
+        nextTick(()=>nameInput.value.focus());
+        operation.value = op;
+        id.value = employee;
+        if(op == 1){
+            title.value='Create '+moduleTitle;
+        }else{
+            title.value='Edit '+moduleTitle;
+            form.name = name;
+            form.email = email;
+            form.phone = phone;
+            form.department_id = department;
+        }
+    }
+
+    const closeModal = ()=>{
+      modal.value = false;
+      form.reset();  
+    }
+
+    const save = ()=>{
+        if (operation.value == 1) {
+           form.post(route('employee.store'),{
+                onSuccess:() => {ok(moduleTitle+' Created')}
+           }); 
+        } else {
+            form.put(route('employee.update',id.value),{
+                onSuccess:() => {ok(moduleTitle+' Updated')}
+           });
+        }
+    }
+
+    const ok = (msj) =>{
+        form.reset();
+        closeModal();
+        Swal.fire({title:msj,icon:'success'});
+    }
+
+    const deleteField = (id,name)=>{
+        const alerta =Swal.mixin({
+            buttonsStyling:true
+        });
+        alerta.fire({
+            title:'Are You Deleting '+moduleTitle+' '+name+' ?',
+            icon:'question',showCancelButton:true,
+            confirmButtonText:'<i class="fa-solid fa-check">Yes Delete</i>',
+            cancelButtonText:'<i class="fa-solid fa-check">Cancel</i>',
+        }).then((result)=>{
+            if(result.isConfirmed){
+                form.delete(route('employee.destroy',id),{
+                    onSuccess:() =>{ok(moduleTitle+' Delete')}
+                    });
+                }
+            });
+        }
+    
+
 </script>
 
 <template>
@@ -18,8 +96,14 @@
     <AppLayout>
         <div class="w-full px-0.5 py-0.5 my-5 mb-15 h-auto">
             <div class="flex items-center mt-4  justify-between flex-column md:flex-row flex-wrap space-y-4 md:space-y-0 py-4 rounded-2xl pr-1">
-                <div class="">
-                   
+                <div class="mt-2 ml-5">
+                    <Buttons 
+                        color-button="s" 
+                        maxWidthButton
+                        @click="$event=>openModal(1)"
+                    >
+                        Add
+                    </Buttons>
                 </div>     
                 <div class="relative">
                     <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -112,8 +196,20 @@
                             </td>
                             <td class="px-1 py-0.5 truncate">
                                 <div class="w-full flex flex-col md:flex-row pr-1 md:gap-1.5 gap-0">
-                                    <Buttons color-button="i" link maxWidthButton>Edit</Buttons>
-                                    <Buttons color-button="e" link maxWidthButton>Delete</Buttons>
+                                    <Buttons 
+                                        color-button="i" 
+                                        maxWidthButton
+                                        @click="$event=>openModal(2,e.name,e.email,e.phone,e.department_id,e.id)"
+                                    >
+                                        Edit
+                                    </Buttons>
+                                    <Buttons 
+                                        color-button="e" 
+                                        maxWidthButton
+                                        @click="$event=>deleteField(e.id,e.name)"
+                                    >
+                                        Delete
+                                    </Buttons>
                                 </div>   
                             </td>                           
                     </tr>
@@ -123,6 +219,67 @@
         <div class="flex justify-center">
             <Pagination :pagination="employees" />
         </div>
+
+        <modal :title="title" :show="modal" @close="closeModal">
+
+            <div class="p-3 mt-6">  
+                 <div class="mt-2">
+                    <Label for="name" value="Name:" />
+                    <TextInput 
+                        id="name" 
+                        ref="nameInput"
+                        v-model="form.name"
+                        type="text"
+                    />
+                    <ErrorMsj :message="form.errors.name" class="m-2"></ErrorMsj>
+                 </div>
+                 <div class="mt-2">
+                    <Label for="email" value="Email:" />
+                    <TextInput 
+                        id="email" 
+                        v-model="form.email"
+                        type="text"
+                    />
+                    <ErrorMsj :message="form.errors.email" class="m-2"></ErrorMsj>
+                 </div>
+                 <div class="mt-2">
+                    <Label for="phone" value="Phone:" />
+                    <TextInput 
+                        id="phone" 
+                        v-model="form.phone"
+                        type="text"
+                    />
+                    <ErrorMsj :message="form.errors.phone" class="m-2"></ErrorMsj> 
+                 </div>
+                 <div class="mt-2">
+                    <Label for="name" value="Department:" />
+                    <SelectInput 
+                        id="department_id" 
+                        :options="departments"
+                        v-model="form.department_id"
+                        type="text"
+                    />
+                    <ErrorMsj :message="form.errors.department_id" class="m-2"></ErrorMsj>
+                 </div>
+                 
+            </div>
+                <template #buttonForm>
+                        <Buttons 
+                            color-button="s" 
+                            maxWidthButton
+                            @click="save"
+                        >
+                            Save
+                        </Buttons>
+                        <Buttons 
+                            color-button="e" 
+                            maxWidthButton
+                            @click="closeModal"
+                        >
+                            Cancel
+                        </Buttons>
+                </template>
+        </modal>
 
     </AppLayout>
     
