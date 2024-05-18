@@ -7,6 +7,7 @@ use App\Models\Employee;
 use App\Models\Department;
 use Inertia\Inertia;
 
+
 class EmployeeeController extends Controller
 {
     public function index()
