@@ -56,13 +56,22 @@
                             <h3>Dashboard</h3>
                         </Link>
 
-                        <Link :href="route('tables')" :class="{ 'active': isRouteActive('tables') }">
+
+                        <Link :href="route('department.index')" :class="{ 'active': isRouteActive('department.index') }">
                             <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" stroke-width="2" d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
                             </svg>
-                            <h3>Tablas</h3>
+                            <h3>Department</h3>
+
                         </Link>
-                    
+
+                        <Link :href="route('employee.index')" :class="{ 'active': isRouteActive('employee.index') }">
+                            <span class="material-icons-sharp">
+                                person_outline
+                            </span>
+                            <h3>Employees</h3>
+                        </Link>
+                
                         <Link :href="route('historia')" :class="{ 'active': isRouteActive('historia') }">
                             <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                             <path fill-rule="evenodd" d="M5.617 2.076a1 1 0 0 1 1.09.217L8 3.586l1.293-1.293a1 1 0 0 1 1.414 0L12 3.586l1.293-1.293a1 1 0 0 1 1.414 0L16 3.586l1.293-1.293A1 1 0 0 1 19 3v18a1 1 0 0 1-1.707.707L16 20.414l-1.293 1.293a1 1 0 0 1-1.414 0L12 20.414l-1.293 1.293a1 1 0 0 1-1.414 0L8 20.414l-1.293 1.293A1 1 0 0 1 5 21V3a1 1 0 0 1 .617-.924ZM9 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H9Zm0 4a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H9Zm0 4a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H9Z" clip-rule="evenodd"/>

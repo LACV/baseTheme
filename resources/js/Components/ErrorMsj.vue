@@ -10,8 +10,8 @@ defineProps({
         class="
             flex 
             items-center 
-            p-4 
-            mb-4 
+            p-2 
+            mb-2 
             text-sm
             text-red-800 
             font-bold
