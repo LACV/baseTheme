@@ -20,7 +20,7 @@ aside .toggle{
     height: 4rem;
 }
 
-aside .toggle .close{
+aside .toggle .x-close{
     padding-right: 1rem;
     display: none;
 }
@@ -35,7 +35,7 @@ aside .sidebar{
     background-color: var(--color-white);
     box-shadow: var(--box-shadow);
     border-radius: 15px;
-    height: calc(100% + 2rem);
+    height: calc(100% + 4rem);
     position: relative;
     top: 0.3rem;
     transition: all 0.3s ease
@@ -56,7 +56,7 @@ aside .sidebar a{
     transition: all 0.3s ease;
 }
 
-aside .sidebar a span{
+aside .sidebar a svg{
     font-size: 1.6rem;
     transition: all 0.3s ease;
 }
@@ -85,7 +85,7 @@ aside .sidebar a.active::before{
     margin-left: 0.3rem;
 }
 
-aside .sidebar a.active span{
+aside .sidebar a.active svg{
     color: var(--color-primary);
     margin-left: calc(1rem - 4px);
 }
@@ -135,7 +135,7 @@ aside .sidebar .message-count{
 }
 
 .item{   
-    width: 100%;
+    width: 12rem;
     height: max-content;
     padding: 1rem;
 }
